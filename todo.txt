@@ -1,0 +1,19 @@
+
+done :
+les pages admin dans un dossier séparé
+mettre les previews au bon ratio
+pouvoir ajouter/supprimer un post
+ne pas mettre de post en preview sur la page admin par défaut
+recharger la page chaque jour
+autoriser des temps séparés pour chaque display
+prévoir si il n'y a pas d'image à un format donné, en prendre un autre
+prendre en compte l'ordre des slides défini dans le xml
+prendre en compte les semaines dans l'affichage (pour l'instant défini manuellement dans un champ du xml)
+
+todo :
+faire des previews pour les slots
+dater les semaines
+prévoir des stats
+commenter le code
+bug = il semble que le post supprimé soit toujours le dernier
+faire l'admin en ajax sans recharger les pages
