@@ -26,7 +26,31 @@
 		margin:0px;
 		padding:0px;
 	}
-	
+	.logoLine {
+		height:60px;
+		background-color:#FFF;
+		width:1126px;
+		margin:4px;
+	}
+	#big {
+		width:1126px;
+		height:1692px;
+		margin:4px;
+	}
+	.quarterSection {
+		width:545px;
+		height:838px;
+		margin-right:0px;
+		margin-bottom:0px;
+		margin-left:4px;
+		margin-top:4px;
+	}
+	.halfSection {
+		width:1126px;
+		height:838px;
+		margin-left:4px;
+		margin-top:4px;
+	}
 	</style>
 	<link href='https://fonts.googleapis.com/css?family=Anonymous+Pro:700' rel='stylesheet' type='text/css'>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
@@ -180,19 +204,19 @@
 				else		 echo '<div class="ListLineB" id="line'.$i.'">';
 				echo '</div>';
 			}
-			echo '<div style="height:60px;background-color:#FFF;width:1126px;margin:4px;">DEIKON</div>';
+			echo '<div class="logoLine">DEIKON</div>';
 		?>
 	</div>
 	<div id="displayStyle1" style="display:none;"><!--full-->
-		<img id="big" style="width:1126px;height:1692px;margin:4px;"></img>
+		<img id="big"></img>
 	</div>
 	<div id="displayStyle2" style="display:none;"><!--quarter-->
-		<img id="quarter1" style="width:545px;height:838px;margin-right:0px;margin-bottom:0px;margin-left:4px;margin-top:4px;"></img><img id="quarter2" style="width:545px;height:838px;margin-right:0px;margin-bottom:0px;margin-left:4px;margin-top:4px;"></img><br/>
-		<img id="quarter3" style="width:545px;height:838px;margin-right:0px;margin-bottom:0px;margin-left:4px;margin-top:4px;"></img><img id="quarter4" style="width:545px;height:838px;margin-right:0px;margin-bottom:0px;margin-left:4px;margin-top:4px;"></img>
+		<img class="quarterSection" id="quarter1"></img><img class="quarterSection" id="quarter2"></img><br/>
+		<img class="quarterSection" id="quarter3"></img><img class="quarterSection" id="quarter4"></img>
 	</div>
 	<div id="displayStyle3" style="display:none;"><!--half-->
-		<img id="half1" style="width:1126px;height:838px;margin-left:4px;margin-top:4px;"></img><br/>
-		<img id="half2" style="width:1126px;height:838px;margin-left:4px;margin-top:4px;"></img>
+		<img class="halfSection" id="half1"></img><br/>
+		<img class="halfSection" id="half2"></img>
 	</div>
 </body>
 </html>
