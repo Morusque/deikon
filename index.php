@@ -7,6 +7,7 @@
 		margin:4px;
 		padding:0px;
 	}
+	
 	</style>
 	<link href='https://fonts.googleapis.com/css?family=Anonymous+Pro:700' rel='stylesheet' type='text/css'>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
@@ -153,24 +154,24 @@
 </head>
 <body style="background-color:black;margin:0px;padding:0px;">
 	<?php // echo "// ".var_dump($slotsIds); ?>
-	<div id="displayStyle0" style="display:none;">
+	<div id="displayStyle0" style="display:none;"><!--thumbnails-->
 		<?php
 			for ($i=0;$i<8;$i++) {
-				if ($i%2==0) echo '<div id="line'.$i.'" style="font-size:30px;height:200px;width:1126px;background-color:#DD8;margin:4px;">';
+				if ($i%2==0) echo '<div class="" id="line'.$i.'" style="font-size:30px;height:200px;width:1126px;background-color:#DD8;margin:4px;">';
 				else		 echo '<div id="line'.$i.'" style="font-size:30px;height:200px;width:1126px;background-color:#8DD;margin:4px;">';
 				echo '</div>';
 			}
 			echo '<div style="height:60px;background-color:#FFF;width:1126px;margin:4px;">DEIKON</div>';
 		?>
 	</div>
-	<div id="displayStyle1" style="display:none;">
+	<div id="displayStyle1" style="display:none;"><!--full-->
 		<img id="big" style="width:1126px;height:1692px;margin:4px;"></img>
 	</div>
-	<div id="displayStyle2" style="display:none;">
+	<div id="displayStyle2" style="display:none;"><!--quarter-->
 		<img id="quarter1" style="width:545px;height:838px;margin-right:0px;margin-bottom:0px;margin-left:4px;margin-top:4px;"></img><img id="quarter2" style="width:545px;height:838px;margin-right:0px;margin-bottom:0px;margin-left:4px;margin-top:4px;"></img><br/>
 		<img id="quarter3" style="width:545px;height:838px;margin-right:0px;margin-bottom:0px;margin-left:4px;margin-top:4px;"></img><img id="quarter4" style="width:545px;height:838px;margin-right:0px;margin-bottom:0px;margin-left:4px;margin-top:4px;"></img>
 	</div>
-	<div id="displayStyle3" style="display:none;">
+	<div id="displayStyle3" style="display:none;"><!--half-->
 		<img id="half1" style="width:1126px;height:838px;margin-left:4px;margin-top:4px;"></img><br/>
 		<img id="half2" style="width:1126px;height:838px;margin-left:4px;margin-top:4px;"></img>
 	</div>

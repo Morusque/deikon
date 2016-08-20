@@ -48,7 +48,7 @@
 		
 		echo "<br/>";
 
-		$formatNames = ["thumbnail","half","quarter","full"];
+		$formatNames = ["thumbnail","full","quarter","half"];
 
 		echo '<form action="addRemovePost.php" method="post" ><input type="hidden" name="postId" value="' . $post->getAttribute('id') . '"/><input type="submit" value="remove this post"></input></form>';
 		echo '<form action="addRemovePost.php" method="post" ><input type="submit" value="add a new post"></input></form>';
