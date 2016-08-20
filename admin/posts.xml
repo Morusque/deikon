@@ -1,44 +1,22 @@
 <posts>
 	<var name="currentWeek" value="0" />
-	<post id="0">
-		<element name="folderName" value="./posts/post0000"/>
-		<element name="title" value="Tricky1"/>
-		<element name="description1" value="WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"/>
-		<element name="description2" value="llllllllllllllllllllllllllllllllllllllllllllllllll"/>
-		<element name="description3" value="Abcdef Ab Abcdef Ab Abcdef AbcAbcdef AbcAbcdef Abc"/>
-		<element name="full" value="picture01.jpg"/>
-		<element name="half" value="picture02.jpg"/>
-		<element name="quarter" value="picture03.jpg"/>
-		<element name="thumbnail" value="picture04.jpg"/>
-	</post>
-	<post id="1">
-		<element name="folderName" value="./posts/post0001"/>
-		<element name="title" value="Tricky2"/>
-		<element name="description1" value="WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"/>
-		<element name="description2" value="llllllllllllllllllllllllllllll"/>
-		<element name="description3" value="Abcdef Ab Abcdef Ab Abcdef Abc"/>
-		<element name="full" value="picture01.jpg"/>
-		<element name="half" value="picture02.jpg"/>
-		<element name="quarter" value="picture03.jpg"/>
-		<element name="thumbnail" value="picture04.jpg"/>
-	</post>
 	<slots>
 		<week number="0">
 			<format type="0">
-				<slot number="0" targetid="0"/>
-				<slot number="1" targetid="1"/>
-				<slot number="2" targetid="2"/>
-				<slot number="3" targetid="3"/>
-				<slot number="4" targetid="4"/>
-				<slot number="5" targetid="5"/>
-				<slot number="6" targetid="6"/>
-				<slot number="7" targetid="7"/>
-				<slot number="8" targetid="8"/>
-				<slot number="9" targetid="9"/>
-				<slot number="10" targetid="10"/>
-				<slot number="11" targetid="11"/>
-				<slot number="12" targetid="12"/>
-				<slot number="13" targetid="13"/>
+				<slot number="0" targetid="-1"/>
+				<slot number="1" targetid="-1"/>
+				<slot number="2" targetid="-1"/>
+				<slot number="3" targetid="-1"/>
+				<slot number="4" targetid="-1"/>
+				<slot number="5" targetid="-1"/>
+				<slot number="6" targetid="-1"/>
+				<slot number="7" targetid="-1"/>
+				<slot number="8" targetid="-1"/>
+				<slot number="9" targetid="-1"/>
+				<slot number="10" targetid="-1"/>
+				<slot number="11" targetid="-1"/>
+				<slot number="12" targetid="-1"/>
+				<slot number="13" targetid="-1"/>
 				<slot number="14" targetid="-1"/>
 				<slot number="15" targetid="-1"/>
 				<slot number="16" targetid="-1"/>
@@ -77,11 +55,11 @@
 				<slot number="49" targetid="-1"/>				
 			</format>		
 			<format type="1">
-				<slot number="0" targetid="2"/>
-				<slot number="1" targetid="3"/>
-				<slot number="2" targetid="4"/>
-				<slot number="3" targetid="5"/>
-				<slot number="4" targetid="6"/>
+				<slot number="0" targetid="-1"/>
+				<slot number="1" targetid="-1"/>
+				<slot number="2" targetid="-1"/>
+				<slot number="3" targetid="-1"/>
+				<slot number="4" targetid="-1"/>
 				<slot number="5" targetid="-1"/>
 				<slot number="6" targetid="-1"/>
 				<slot number="7" targetid="-1"/>
@@ -89,12 +67,12 @@
 				<slot number="9" targetid="-1"/>
 			</format>
 			<format type="2">
-				<slot number="0" targetid="7"/>
-				<slot number="1" targetid="8"/>
-				<slot number="2" targetid="9"/>
-				<slot number="3" targetid="10"/>
-				<slot number="4" targetid="11"/>
-				<slot number="5" targetid="12"/>
+				<slot number="0" targetid="-1"/>
+				<slot number="1" targetid="-1"/>
+				<slot number="2" targetid="-1"/>
+				<slot number="3" targetid="-1"/>
+				<slot number="4" targetid="-1"/>
+				<slot number="5" targetid="-1"/>
 				<slot number="6" targetid="-1"/>
 				<slot number="7" targetid="-1"/>
 				<slot number="8" targetid="-1"/>
@@ -111,15 +89,15 @@
 				<slot number="19" targetid="-1"/>
 			</format>
 			<format type="3">
-				<slot number="0" targetid="1"/>
-				<slot number="1" targetid="2"/>
-				<slot number="2" targetid="3"/>
-				<slot number="3" targetid="4"/>
-				<slot number="4" targetid="5"/>
-				<slot number="5" targetid="6"/>
-				<slot number="6" targetid="7"/>
-				<slot number="7" targetid="8"/>
-				<slot number="8" targetid="9"/>
+				<slot number="0" targetid="-1"/>
+				<slot number="1" targetid="-1"/>
+				<slot number="2" targetid="-1"/>
+				<slot number="3" targetid="-1"/>
+				<slot number="4" targetid="-1"/>
+				<slot number="5" targetid="-1"/>
+				<slot number="6" targetid="-1"/>
+				<slot number="7" targetid="-1"/>
+				<slot number="8" targetid="-1"/>
 				<slot number="9" targetid="-1"/>
 				<slot number="10" targetid="-1"/>
 				<slot number="11" targetid="-1"/>
