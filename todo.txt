@@ -17,3 +17,4 @@ prévoir des stats
 commenter le code
 bug = il semble que le post supprimé soit toujours le dernier
 faire l'admin en ajax sans recharger les pages
+séparer le css
