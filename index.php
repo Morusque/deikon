@@ -7,6 +7,25 @@
 		margin:4px;
 		padding:0px;
 	}
+	.ListLineA {
+		font-size:30px;
+		height:200px;
+		width:1126px;
+		background-color:#DD8;
+		margin:4px;
+	}
+	.ListLineB {
+		font-size:30px;
+		height:200px;
+		width:1126px;
+		background-color:#8DD;
+		margin:4px;
+	}
+	body {
+		background-color:black;
+		margin:0px;
+		padding:0px;
+	}
 	
 	</style>
 	<link href='https://fonts.googleapis.com/css?family=Anonymous+Pro:700' rel='stylesheet' type='text/css'>
@@ -152,13 +171,13 @@
 	</script>
 	<meta http-equiv="refresh" content="43200; URL=./">
 </head>
-<body style="background-color:black;margin:0px;padding:0px;">
+<body>
 	<?php // echo "// ".var_dump($slotsIds); ?>
 	<div id="displayStyle0" style="display:none;"><!--thumbnails-->
 		<?php
 			for ($i=0;$i<8;$i++) {
-				if ($i%2==0) echo '<div class="" id="line'.$i.'" style="font-size:30px;height:200px;width:1126px;background-color:#DD8;margin:4px;">';
-				else		 echo '<div id="line'.$i.'" style="font-size:30px;height:200px;width:1126px;background-color:#8DD;margin:4px;">';
+				if ($i%2==0) echo '<div class="ListLineA" id="line'.$i.'">';
+				else		 echo '<div class="ListLineB" id="line'.$i.'">';
 				echo '</div>';
 			}
 			echo '<div style="height:60px;background-color:#FFF;width:1126px;margin:4px;">DEIKON</div>';
