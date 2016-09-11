@@ -5,7 +5,7 @@
 <body>
 	<?php
 	
-		$baseXml = 'posts.xml';
+		$baseXml = '../posts.xml';
 		$doc = new DOMDocument();
 		$doc->Load($baseXml);
 

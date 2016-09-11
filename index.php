@@ -79,7 +79,7 @@
 					return null;
 				}
 			
-				$baseXml = './admin/posts.xml';
+				$baseXml = 'posts.xml';
 				$doc = new DOMDocument();
 				$doc->Load($baseXml);
 				

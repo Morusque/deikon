@@ -18,3 +18,5 @@ commenter le code
 bug = il semble que le post supprimé soit toujours le dernier
 faire l'admin en ajax sans recharger les pages
 séparer le css
+faire une favicon
+admin/index.php : ajouter un bouton pour réinitialiser l'authentification HTTP en cas de mauvais login
