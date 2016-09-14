@@ -52,10 +52,11 @@
 		margin-top:4px;
 	}
 	</style>
-	<link href='https://fonts.googleapis.com/css?family=Anonymous+Pro:700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Anonymous+Pro:700' rel='stylesheet' type='text/css' />
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet" type='text/css' />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 	<script type="text/javascript">
-		
+
 		var posts = new Array();
 		var slotsIds;
 
@@ -69,20 +70,20 @@
 				tnUrl: tnUrl
 			});
 		}
-		
+
 		$(document).ready(function() {
-		
+
 			<?php
-			
+
 				function getXMLVariable($doc,$name) {
 					foreach ($doc->getElementsByTagName('var') as $el) if ($el->getAttribute("name")==$name) return $el->getAttribute("value");
 					return null;
 				}
-			
+
 				$baseXml = 'posts.xml';
 				$doc = new DOMDocument();
 				$doc->Load($baseXml);
-				
+
 				$posts = $doc->getElementsByTagName('post');
 				for ($i=0 ; $i < $posts->length ; $i++) {
 					$elements = $posts->item($i)->getElementsByTagName('element');
@@ -100,9 +101,9 @@
 						if ($elements->item($j)->getAttribute("name")=="thumbnail") $tnUrl = $elements->item($j)->getAttribute("value");
 						if ($elements->item($j)->getAttribute("name")=="folderName") $folderName = $elements->item($j)->getAttribute("value");
 					}
-					echo 'addPost("'.$title.'","'.$description1.'","'.$description2.'","'.$description3.'","'.$folderName.'","'.$tnUrl.'");';	
+					echo 'addPost("'.$title.'","'.$description1.'","'.$description2.'","'.$description3.'","'.$folderName.'","'.$tnUrl.'");';
 				}
-				
+
 				$slotsIds = array();
 				$currentWeek=getXMLVariable($doc,"currentWeek");
 				$slotsIdNodes = $doc->getElementsByTagName('slots')->item(0)->getElementsByTagName('week')->item($currentWeek)->getElementsByTagName('format');
@@ -115,17 +116,17 @@
 						}
 					}
 				}
-				
+
 				echo "slotsIds = ". json_encode($slotsIds) . ";";
-				
+
 			?>
-			
+
 			updateSlots();
 			$("#displayStyle0").show();
 			switchDisplay();
-			
+
 		});
-		
+
 		var currentD = -1;
 		<?php
 			$displayNodes = $doc->getElementsByTagName('slider')->item(0)->getElementsByTagName('slide');
@@ -153,11 +154,11 @@
 			$("#displayStyle0").hide();
 			$("#displayStyle1").hide();
 			$("#displayStyle2").hide();
-			$("#displayStyle3").hide();			
-			
+			$("#displayStyle3").hide();
+
 			// shift indexes
 			currentF[currentType]=(currentF[currentType]+grouppingPerF[currentType])%slotsIds[currentType].length;
-						
+
 			// update slots
 			updateSlots();
 
@@ -166,7 +167,7 @@
 
 			// schedule the next display switch
 			setTimeout(switchDisplay, timeoutForType[currentD]);
-						
+
 		}
 
 		var currentF = new Array(0,0,0,0);
@@ -191,7 +192,7 @@
 			$("#half1").attr("src",posts[slotsIds[3][(currentF[3]+0)%slotsIds[3].length]].folderName+'/'+posts[slotsIds[3][(currentF[3]+0)%slotsIds[3].length]].tnUrl);
 			$("#half2").attr("src",posts[slotsIds[3][(currentF[3]+1)%slotsIds[3].length]].folderName+'/'+posts[slotsIds[3][(currentF[3]+1)%slotsIds[3].length]].tnUrl);
 		}
-		
+
 	</script>
 	<meta http-equiv="refresh" content="43200; URL=./">
 </head>
@@ -204,8 +205,8 @@
 				else		 echo '<div class="ListLineB" id="line'.$i.'">';
 				echo '</div>';
 			}
-			echo '<div class="logoLine">DEIKON</div>';
 		?>
+		<div class="logoLine"><img src="/images/band-1126x60-deikon.png" alt="Deikon"></div>
 	</div>
 	<div id="displayStyle1" style="display:none;"><!--full-->
 		<img id="big"></img>

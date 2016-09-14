@@ -5,12 +5,12 @@
 <body>
 	<?php
 		/*
-			identification HTTP Digest 
+			identification HTTP Digest
 			début du code
 			source : https://secure.php.net/manual/fr/features.http-auth.php
 		*/
 		$realm = 'Restricted Area';
-		
+
 		//utilisateur => mot de passe
 		$users = array('morusque' => 'zozo1234', 'd2air' => 'zozo1234', 'lepole' => 'zozo1234');
 
@@ -44,7 +44,7 @@
 			$needed_parts = array('nonce'=>1, 'nc'=>1, 'cnonce'=>1, 'qop'=>1, 'username'=>1, 'uri'=>1, 'response'=>1);
 			$data = array();
 			$keys = implode('|', array_keys($needed_parts));
- 
+
 			preg_match_all('@(' . $keys . ')=(?:([\'"])([^\2]+?)\2|([^\s,]+))@', $txt, $matches, PREG_SET_ORDER);
 
 			foreach ($matches as $m) {
@@ -53,30 +53,30 @@
 			}
 
 			return $needed_parts ? false : $data;
-		}		
+		}
 		/*
 			fin du code
-			identification HTTP Digest 
+			identification HTTP Digest
 		*/
-			
+
 		$baseXml = '../posts.xml';
 		$doc = new DOMDocument();
 		$doc->Load($baseXml);
-		
+
 		$posts = $doc->getElementsByTagName('post');
 		$weeks = $doc->getElementsByTagName('slots')->item(0)->getElementsByTagName('week');
-		
+
 		echo $salutatoi;
 		echo 'POSTS : <br/>';
 		echo '<select class="postSelector">';
 		foreach ($posts as $post) echo '<option idValue="'.$post->getAttribute('id').'">'.$post->getAttribute('id').'</option>';
 		echo '</select><br/>';
-		
+
 		function getPostValue($post, $attr_name) {
 			foreach($post->getElementsByTagName("element") as $node) if ($node->getAttribute("name")==$attr_name) return $node->getAttribute("value");
 			return "";
 		}
-		
+
 		foreach ($posts as $post) {
 			echo '<div class="elementList" id="elementList'.$post->getAttribute('id').'" style="display:none;">';
 			echo '<form action="updatePost.php" method="post" enctype="multipart/form-data">';
@@ -100,16 +100,16 @@
 			echo '</form>';
 			echo '</div>';
 		}
-		
+
 		echo "<br/>";
 
 		$formatNames = ["thumbnail","full","quarter","half"];
 
 		echo '<form action="addRemovePost.php" method="post" ><input type="hidden" name="postId" value="' . $post->getAttribute('id') . '"/><input type="submit" value="remove this post"></input></form>';
 		echo '<form action="addRemovePost.php" method="post" ><input type="submit" value="add a new post"></input></form>';
-		
+
 		echo '<br/>----------------------------------------<br/><br/>';
-		
+
 		echo '<form action="updateSlots.php" method="post" >';
 		foreach ($weeks as $week) {
 			echo 'WEEK : '.$week->getAttribute("number").'<br/>';
@@ -134,7 +134,7 @@
 		}
 		echo '<input type="submit" name="update"/>';
 		echo '</form>';
-		
+
 	?>
 	<script type="text/javascript">
 		$(".postSelector").change(function () {
