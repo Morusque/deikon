@@ -10,46 +10,46 @@
 	.ListLineA {
 		font-size:30px;
 		height:200px;
-		width:1126px;
+		width:1080px;
 		background-color:#DD8;
 		margin:4px;
 	}
 	.ListLineB {
 		font-size:30px;
 		height:200px;
-		width:1126px;
+		width:1080px;
 		background-color:#8DD;
 		margin:4px;
 	}
 	body {
-		background-color:black;
+		background-color:#333;
 		margin:0px;
 		padding:0px;
 	}
 	.logoLine {
-		height:60px;
-		background-color:#FFF;
-		width:1126px;
-		margin:4px;
+		height:120px;
+		background-color:#333;
+		width:1080px;
+		margin:0px;
 	}
 	#big {
-		width:1126px;
-		height:1692px;
-		margin:4px;
+		width:1080px;
+		height:1920px;
+		margin:0px;
 	}
 	.quarterSection {
-		width:545px;
-		height:838px;
+		width:540px;
+		height:960px;
 		margin-right:0px;
 		margin-bottom:0px;
-		margin-left:4px;
-		margin-top:4px;
+		margin-left:0px;
+		margin-top:0px;
 	}
 	.halfSection {
-		width:1126px;
-		height:838px;
-		margin-left:4px;
-		margin-top:4px;
+		width:1080px;
+		height:960px;
+		margin-left:0px;
+		margin-top:0px;
 	}
 	</style>
 	<link href='https://fonts.googleapis.com/css?family=Anonymous+Pro:700' rel='stylesheet' type='text/css' />
@@ -171,7 +171,7 @@
 		}
 
 		var currentF = new Array(0,0,0,0);
-		var grouppingPerF = new Array(8,1,4,2);
+		var grouppingPerF = new Array(9,1,4,2);
 		function updateSlots() {
 			for (var i=0 ; i<grouppingPerF[0] ; i++) {
 				var thisPost = posts[slotsIds[0][(currentF[0]+i)%slotsIds[0].length]];
@@ -200,13 +200,13 @@
 	<?php // echo "// ".var_dump($slotsIds); ?>
 	<div id="displayStyle0" style="display:none;"><!--thumbnails-->
 		<?php
-			for ($i=0;$i<8;$i++) {
+			for ($i=0;$i<9;$i++) {
 				if ($i%2==0) echo '<div class="ListLineA" id="line'.$i.'">';
 				else		 echo '<div class="ListLineB" id="line'.$i.'">';
 				echo '</div>';
 			}
 		?>
-		<div class="logoLine"><img src="/images/band-1126x60-deikon.png" alt="Deikon"></div>
+		<div class="logoLine"><img src="/images/maintheme/bandeau_1080x120_deikon.png" alt="Deikon"></div>
 	</div>
 	<div id="displayStyle1" style="display:none;"><!--full-->
 		<img id="big"></img>
