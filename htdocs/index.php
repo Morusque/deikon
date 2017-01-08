@@ -37,16 +37,6 @@
 		height:1920px;
 		margin:0px;
 	}
-}
-.bigframe{
-	position: absolute;
-	height:100%;
-}
-.bigpost{
-	position: absolute;
-	z-index: -1;
-	height:100%;
-}
 	.quarterSection {
 		width:540px;
 		height:960px;
@@ -220,6 +210,7 @@
 	</div>
 	<div id="displayStyle1" style="display:none;"><!--full-->
 		<img id="big"></img>
+	</div>
 	<div id="displayStyle2" style="display:none;"><!--quarter-->
 		<img class="quarterSection" id="quarter1"></img><img class="quarterSection" id="quarter2"></img><br/>
 		<img class="quarterSection" id="quarter3"></img><img class="quarterSection" id="quarter4"></img>
