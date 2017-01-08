@@ -11,14 +11,14 @@
 		font-size:30px;
 		height:200px;
 		width:1080px;
-		background-color:#DD8;
+		background-color:#f7f;
 		margin:4px;
 	}
 	.ListLineB {
 		font-size:30px;
 		height:200px;
 		width:1080px;
-		background-color:#8DD;
+		background-color:#ef5;
 		margin:4px;
 	}
 	body {
@@ -37,6 +37,16 @@
 		height:1920px;
 		margin:0px;
 	}
+}
+.bigframe{
+	position: absolute;
+	height:100%;
+}
+.bigpost{
+	position: absolute;
+	z-index: -1;
+	height:100%;
+}
 	.quarterSection {
 		width:540px;
 		height:960px;
@@ -177,7 +187,7 @@
 				var thisPost = posts[slotsIds[0][(currentF[0]+i)%slotsIds[0].length]];
 				$("#line"+i).html("");
 				var $thisImg = $("<img>").attr("src",thisPost.folderName+'/'+thisPost.tnUrl).addClass("thumbnail").attr("id","lineThumb"+i);
-				var $thisTitle = $("<div>").html(thisPost.title).css("font-family","Anonymous Pro").css("font-size","40px").css("font-weight","bold");
+				var $thisTitle = $("<div>").html(thisPost.title).css("font-family","Source Sans Pro").css("font-size","40px").css("font-weight","bold");
 				var $thisDescription = $("<div>").html(thisPost.description1).append('<br>').append(thisPost.description2).append('<br>').append(thisPost.description3).css("font-family","Anonymous Pro").css("font-size","30px").css("font-weight","bold");
 				var $imgCol = $("<td>").append($thisImg);
 				var $textCol = $("<td>").append($thisTitle).append($thisDescription).css("vertical-align","top").css("padding-top","10px").css("padding-left","10px");
@@ -210,7 +220,6 @@
 	</div>
 	<div id="displayStyle1" style="display:none;"><!--full-->
 		<img id="big"></img>
-	</div>
 	<div id="displayStyle2" style="display:none;"><!--quarter-->
 		<img class="quarterSection" id="quarter1"></img><img class="quarterSection" id="quarter2"></img><br/>
 		<img class="quarterSection" id="quarter3"></img><img class="quarterSection" id="quarter4"></img>
