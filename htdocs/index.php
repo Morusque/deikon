@@ -180,7 +180,7 @@
 				var $thisTitle = $("<div>").html(thisPost.title).css("font-family","Source Sans Pro").css("font-size","40px").css("font-weight","bold");
 				var $thisDescription = $("<div>").html(thisPost.description1).append('<br>').append(thisPost.description2).append('<br>').append(thisPost.description3).css("font-family","Anonymous Pro").css("font-size","30px").css("font-weight","bold");
 				var $imgCol = $("<td>").append($thisImg);
-				var $textCol = $("<td>").append($thisTitle).append($thisDescription).css("vertical-align","top").css("padding-top","10px").css("padding-left","10px");
+				var $textCol = $("<td>").append($thisTitle).append($thisDescription).css("vertical-align","top").css("padding-top","10px").css("padding-left","10px").css("word-wrap","break-word");
 				var $table = $("<table>").css("border-spacing","0px").append($imgCol).append($textCol);
 				$("#line"+i).append($table);
 			}
