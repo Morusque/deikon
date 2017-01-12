@@ -178,7 +178,7 @@
 				$("#line"+i).html("");
 				var $thisImg = $("<img>").attr("src",thisPost.folderName+'/'+thisPost.tnUrl).addClass("thumbnail").attr("id","lineThumb"+i);
 				var $thisTitle = $("<div>").html(thisPost.title).css("font-family","Source Sans Pro").css("font-size","40px").css("font-weight","bold");
-				var $thisDescription = $("<div>").html(thisPost.description1).append('<br>').append(thisPost.description2).append('<br>').append(thisPost.description3).css("font-family","Anonymous Pro").css("font-size","30px").css("font-weight","bold");
+				var $thisDescription = $("<div>").html(thisPost.description1).append('<br>').append(thisPost.description2).append('<br>').append(thisPost.description3).css("font-family","Anonymous Pro").css("font-size","30px");
 				var $imgCol = $("<td>").append($thisImg);
 				var $textCol = $("<td>").append($thisTitle).append($thisDescription).css("vertical-align","top").css("padding-top","10px").css("padding-left","10px").css("word-wrap","break-word");
 				var $table = $("<table>").css("border-spacing","0px").append($imgCol).append($textCol);
@@ -195,6 +195,8 @@
 
 	</script>
 	<meta http-equiv="refresh" content="43200; URL=./">
+	<link rel="icon" type="image/png" href="favicon.png" />
+	<!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="favicon.ico" /><![endif]-->
 </head>
 <body>
 	<?php // echo "// ".var_dump($slotsIds); ?>
