@@ -37,6 +37,43 @@
 		height:1920px;
 		margin:0px;
 	}
+	.bigFrame{
+	  position: absolute;
+	  height:100%;
+	}
+	.bigPost{
+	  position: absolute;
+	  z-index: -1;
+	  height:100%;
+	}
+	.halfSection {
+		width:1080px;
+		height:960px;
+		margin-left:0px;
+		margin-top:0px;
+	}
+	.halfFrameTop{
+		position: absolute;
+		top: 0px;
+		height:100%;
+	}
+	.halfFrameBottom{
+		position: absolute;
+		top: 960px;
+		height:100%;
+	}
+	.halfPostTop{
+		position: absolute;
+		top: 0px;
+		z-index: -1;
+		height:100%;
+	}
+	.halfPostBottom{
+		position: absolute;
+		top: 960px;
+		z-index: -1;
+		height:100%;
+	}
 	.quarterSection {
 		width:540px;
 		height:960px;
@@ -45,11 +82,49 @@
 		margin-left:0px;
 		margin-top:0px;
 	}
-	.halfSection {
-		width:1080px;
-		height:960px;
-		margin-left:0px;
-		margin-top:0px;
+	.quarterFrameTopLeft{
+		position: absolute;
+		height:100%;
+	}
+	.quarterFrameTopRight{
+		position: absolute;
+		left: 540px;
+		height:100%;
+	}
+	.quarterFrameBottomLeft{
+		position: absolute;
+		top: 960px;
+		height:100%;
+	}
+	.quarterFrameBottomRight{
+		position: absolute;
+		top: 960px;
+		left: 540px;
+		height:100%;
+	}
+	.quarterPostTopLeft{
+		position: absolute;
+		z-index: -1;
+		height:100%;
+	}
+	.quarterPostTopRight{
+		position: absolute;
+		left: 540px;
+		z-index: -1;
+		height:100%;
+	}
+	.quarterPostBottomLeft{
+		position: absolute;
+		top: 960px;
+		z-index: -1;
+		height:100%;
+	}
+	.quarterPostBottomRight{
+		position: absolute;
+		top: 960px;
+		left: 540px;
+		z-index: -1;
+		height:100%;
 	}
 	</style>
 	<link href='https://fonts.googleapis.com/css?family=Anonymous+Pro:700' rel='stylesheet' type='text/css' />
@@ -211,15 +286,56 @@
 		<div class="logoLine"><img src="/images/maintheme/bandeau_1080x120_deikon.png" alt="Deikon"></div>
 	</div>
 	<div id="displayStyle1" style="display:none;"><!--full-->
-		<img id="big"></img>
+		<div class="bigFrame">
+			<img src="images/maintheme/frame_1080x1920.png" alt="" />
+		</div>
+		<div class="bigPost">
+			<img id="big" alt="" />
+		</div>
 	</div>
 	<div id="displayStyle2" style="display:none;"><!--quarter-->
-		<img class="quarterSection" id="quarter1"></img><img class="quarterSection" id="quarter2"></img><br/>
-		<img class="quarterSection" id="quarter3"></img><img class="quarterSection" id="quarter4"></img>
+		<div>
+			<div class="quarterFrameTopLeft">
+				<img src="images/maintheme/frame_540x960_top_left.png" alt="" />
+			</div>
+			<div class="quarterPostTopLeft">
+				<img class="quarterSection" id="quarter1" />
+			</div>
+			<div class="quarterFrameTopRight">
+				<img src="images/maintheme/frame_540x960_top_right.png" alt="" />
+			</div>
+			<div class="quarterPostTopRight">
+				<img class="quarterSection" id="quarter2" />
+			</div>
+			<div class="quarterFrameBottomLeft">
+				<img src="images/maintheme/frame_540x960_bottom_left.png" alt="" />
+			</div>
+			<div class="quarterPostBottomLeft">
+				<img class="quarterSection" id="quarter3" />
+			</div>
+			<div class="quarterFrameBottomRight">
+				<img src="images/maintheme/frame_540x960_bottom_right.png" alt="" />
+			</div>
+			<div class="quarterPostBottomRight">
+				<img class="quarterSection" id="quarter4" />
+			</div>
+		</div>
 	</div>
 	<div id="displayStyle3" style="display:none;"><!--half-->
-		<img class="halfSection" id="half1"></img><br/>
-		<img class="halfSection" id="half2"></img>
+		<div>
+			<div class="halfFrameTop">
+				<img src="images/maintheme/frame_1080x960_top.png" alt="" /><br />
+			</div>
+			<div class="halfPostTop">
+				<img class="halfSection" id="half1" />
+			</div>
+			<div class="halfFrameBottom">
+				<img src="images/maintheme/frame_1080x960_bottom.png" alt="" />
+			</div>
+			<div class="halfPostBottom">
+				<img class="halfSection" id="half2" />
+			</div>
+		</div>
 	</div>
 </body>
 </html>
