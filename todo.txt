@@ -1,15 +1,25 @@
 
-todo :
+Todo :
 faire des previews pour les slots
 dater les semaines
 prévoir des stats
 commenter le code
-bug = il semble que le post supprimé soit toujours le dernier
 faire l'admin en ajax sans recharger les pages
 séparer le css
 admin/index.php : ajouter un bouton pour réinitialiser l'authentification HTTP en cas de mauvais login
 
-done :
+Bug :
+bug01 = Il semble que le post supprimé soit toujours le dernier (vérifié, c'est bien le dernier qui est supprimé)/
+bug02 = La supression d'un post ne supprime pas les fichiers et dossiers présents dans le dossier "posts/".
+bug03 = La supression d'un post ne supprime toutes les données dans le fichier "posts.xml", seules celles contenues dans "<post id='n'>" le sont, De plus ces données supprimées laissent des lignes vides (ce dernier point est à révérifier).
+bug04 = Quand tous les "posts" sont suprimés l'interface d'admin ne permet plus la création ou un contôle.
+bug05 = Quand un fichier posts.xml vide est placé dans le répertoire l'interface d'admin affichage une page blanche.
+bug06 = En éditant un "post", ce n'est pas possible de remplacer les images, mais les nouvelles images sont téléchargées dans le dossier du "post" à côté des précédentes. Les nouvelles images sont renomées par le script, mais le nom du fichier dans la base de données reste inchangé.
+bug07 = À l'affichage par défaut de la page "admin" (au premier chargement) si j'uitlise le bouton "add a new post" un nouveau "post" est crée, mais le formulaire d'édition n'est pas affiché, un fichier vide est créé dans "posts/" et  les données XML sont inscrites en bas dans le fichier "posts.xml" sur la dernière ligne entre  </slider> et </posts>.
+bug08 = Quand j'enlève tous les "posts" (sauf 2) la page principale n'affiche rien (sauf la couleur de fond définie par CSS).
+
+
+Done :
 les pages admin dans un dossier séparé
 mettre les previews au bon ratio
 pouvoir ajouter/supprimer un post
