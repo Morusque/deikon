@@ -63,7 +63,7 @@
 		$baseXml = '../posts.xml';
 		$doc = new DOMDocument();
 
-		if (!file_exists($baseXml)) copy("postsTemplate.xml", "posts.xml");
+		if (!file_exists($baseXml)) copy("./postsTemplate.xml", "../posts.xml");
 		
 		$doc->Load($baseXml);
 
