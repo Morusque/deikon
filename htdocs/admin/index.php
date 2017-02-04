@@ -133,9 +133,13 @@
 			}
 			echo '<br/>';
 		}
-		echo '<input type="submit" name="update"/>';
+		echo '<input type="submit" value="update" name="update"/>';
 		echo '</form>';
 
+		echo '<form action="resetPosts.php" method="post" >';
+		echo '<input type="submit" value="reset posts file"/>';
+		echo '</form>';
+		
 	?>
 	<script type="text/javascript">
 		
