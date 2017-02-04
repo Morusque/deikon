@@ -1,0 +1,1 @@
+this file only ensures the ./posts directory is in the repository

@@ -18,10 +18,10 @@
 		echo $_POST['description1'] . "<br/>";
 		echo $_POST['description2'] . "<br/>";
 		echo $_POST['description3'] . "<br/>";
-		echo $_POST['full'] . "<br/>";
-		echo $_POST['half'] . "<br/>";
-		echo $_POST['quarter'] . "<br/>";
-		echo $_POST['thumbnail'] . "<br/>";
+		if (isset($_POST['full'])) echo $_POST['full'] . "<br/>";
+		if (isset($_POST['half'])) echo $_POST['half'] . "<br/>";
+		if (isset($_POST['quarter'])) echo $_POST['quarter'] . "<br/>";
+		if (isset($_POST['thumbnail'])) echo $_POST['thumbnail'] . "<br/>";
 		
 		$posts = $doc->getElementsByTagName('post');
 		$thisPost = null;
@@ -39,8 +39,8 @@
 					$element->setAttribute("value",$_POST[$thisName]);
 				}
 			}
-						
-			for ($i=0;$i<4;$i++) {
+			
+			for ($i=0;$i<4;$i++) { // update images files
 				echo $formatsNames[$i] . " : ";
 				if(!empty($_POST)) {
 					if( !empty($_FILES[$formatsNames[$i]]['name']) ) {
@@ -52,8 +52,11 @@
 									if(isset($_FILES[$formatsNames[$i]]['error']) && UPLOAD_ERR_OK === $_FILES[$formatsNames[$i]]['error']) {
 										$newName = uniqid() .'.'. $extension;
 										if (move_uploaded_file($_FILES[$formatsNames[$i]]['tmp_name'], '../' . $_POST['folderName'].'/'.$newName)) {
-											foreach ($thisPost->getElementsByTagName("element") as $element) 
-												if ($element->getAttribute("name")==$formatsNames[$i]) $element->setAttribute("value",$newName);
+											foreach ($thisPost->getElementsByTagName("element") as $element) {
+													if ($element->getAttribute("name")==$formatsNames[$i]) {
+														$element->setAttribute("value",$newName);
+													}
+												}
 											echo 'upload done';
 										} else echo 'Upload failed';
 									} else echo 'file has an error';
@@ -65,7 +68,7 @@
 				echo "<br/>";
 			}
 			
-						// fill blank images
+			// fill blank images
 			$foundUrl="";
 			foreach ($thisPost->getElementsByTagName("element") as $element) {
 				$thisName = $element->getAttribute("name");
@@ -76,11 +79,13 @@
 			}
 			if ($foundUrl!="") {
 				foreach ($thisPost->getElementsByTagName("element") as $element) {
-				$thisName = $element->getAttribute("name");
-				if ($thisName=="thumbnail") $element->setAttribute("value",$foundUrl);
-				if ($thisName=="quarter") $element->setAttribute("value",$foundUrl);
-				if ($thisName=="half") $element->setAttribute("value",$foundUrl);
-				if ($thisName=="full") $element->setAttribute("value",$foundUrl);
+					if ($element->getAttribute("value")=="") {
+						$thisName = $element->getAttribute("name");
+						if ($thisName=="thumbnail") $element->setAttribute("value",$foundUrl);
+						if ($thisName=="quarter") $element->setAttribute("value",$foundUrl);
+						if ($thisName=="half") $element->setAttribute("value",$foundUrl);
+						if ($thisName=="full") $element->setAttribute("value",$foundUrl);
+					}
 				}
 			}
 

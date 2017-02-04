@@ -101,7 +101,7 @@
 				}
 				echo '<br/>';
 			}
-			echo '<input type="submit" name="update"/>';
+			echo '<input type="submit" value="update this post" name="update"/>';
 			echo '</form>';
 			echo '</div>';
 		}
