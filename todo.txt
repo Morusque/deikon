@@ -1,5 +1,5 @@
 ﻿
-Todo :
+Features :
 faire des previews pour les slots
 dater les semaines
 prévoir des stats
@@ -18,15 +18,4 @@ bug06 = En éditant un « post », il est impossible de remplacer les images, 
 bug07 = À l’affichage par défaut de la page d’administration (au premier chargement) si j’utilise le bouton « add a new post » un nouveau « post » est créé, mais le formulaire d’édition n’est pas affiché, un fichier vide est créé dans « posts/ » et les données XML sont inscrites en bas dans le fichier « posts.xml » sur la dernière ligne entre </slider> et </posts>.
 bug08 = Quand j’enlève tous les « posts » (sauf 2) la page principale n’affiche plus rien (sauf la couleur de fond définie par CSS).
 
-
-Done :
-les pages admin dans un dossier séparé
-mettre les previews au bon ratio
-pouvoir ajouter/supprimer un post
-ne pas mettre de post en preview sur la page administration par défaut
-recharger la page chaque jour
-autoriser des temps séparés pour chaque display
-prévoir que s’il n-y a pas d’image à un format donné, il faut en prendre un autre
-prendre en compte l’ordre des slides défini dans le fichier XML
-prendre en compte les semaines dans l’affichage (pour l’instant défini manuellement dans un champ du fichier XML)
-faire une favicon
+To review :
