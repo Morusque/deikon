@@ -137,7 +137,7 @@
 			}
 			echo '<br/>';
 		}
-		echo '<input type="submit" value="update" name="update"/>';
+		echo '<input type="submit" value="update/clean slots" name="update"/>';
 		echo '</form>';
 
 		echo '<form action="resetPosts.php" method="post" >';

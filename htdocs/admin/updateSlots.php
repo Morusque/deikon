@@ -14,6 +14,14 @@
 			foreach ($week->getElementsByTagName("format") as $format) {
 				foreach ($format->getElementsByTagName("slot") as $slot) {
 					$slot->setAttribute("targetid",$_POST['format'.$format->getAttribute("type").'slot'.$slot->getAttribute("number")]);
+					// then clean by checking if the id still exists
+					$found=false;
+					foreach ($doc->getElementsByTagName('post') as $post) {
+						if ($post->getAttribute("id") == $slot->getAttribute("targetid")) $found=true;
+					}
+					if (!$found) {
+						$slot->setAttribute("targetid",-1);
+					}
 				}
 			}
 		}
