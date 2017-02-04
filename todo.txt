@@ -12,10 +12,11 @@ Bug :
 bug02 = La suppression d’un « post » ne supprime pas les fichiers et dossiers présents dans le dossier « posts/ ».
 bug03 = La suppression d’un post ne supprime toutes les données dans le fichier « posts.xml », seules celles contenues dans « <post id='n'> » le sont, De plus ces données supprimées laissent des lignes vides (ce dernier point est à reproduire).
 bug04 = Quand tous les « posts » sont supprimés l’interface d’administration ne permet plus la création ou un contrôle.
-bug05 = Quand un fichier « posts.xml » vide est placé dans le répertoire l’interface d’administration affiche une page blanche.
 bug06 = En éditant un « post », il est impossible de remplacer les images, mais les nouvelles images sont téléchargées dans le dossier du « post » à côté des précédentes. Les nouvelles images sont renommées par le script, mais le nom du fichier dans la base de données reste inchangé.
 bug07 = À l’affichage par défaut de la page d’administration (au premier chargement) si j’utilise le bouton « add a new post » un nouveau « post » est créé, mais le formulaire d’édition n’est pas affiché, un fichier vide est créé dans « posts/ » et les données XML sont inscrites en bas dans le fichier « posts.xml » sur la dernière ligne entre </slider> et </posts>.
 bug08 = Quand j’enlève tous les « posts » (sauf 2) la page principale n’affiche plus rien (sauf la couleur de fond définie par CSS).
 
 To review :
 bug01 = Il semble que le post supprimé soit toujours le dernier (vérifié, c’est bien le dernier qui est supprimé) << done ! (mais ça ne décale pas les index)
+bug05 = Quand un fichier « posts.xml » vide est placé dans le répertoire l’interface d’administration affiche une page blanche. < c'est toujours le cas mais j'ai rajouté un bouton pour resseter correctement le fichier
+
