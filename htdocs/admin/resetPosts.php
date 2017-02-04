@@ -5,8 +5,8 @@
 <body>
 	<?php
 	
-		copy("posts.xml", "postsBackup.xml");
-		copy("postsTemplate.xml", "posts.xml");
+		copy("../posts.xml", "postsBackup.xml");
+		copy("postsTemplate.xml", "../posts.xml");
 		echo '<a href="./">back to admin</a>';
 		
 	?>
