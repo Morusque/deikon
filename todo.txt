@@ -9,7 +9,6 @@ séparer le css
 admin/index.php : ajouter un bouton pour réinitialiser l’authentification HTTP en cas de mauvais login
 
 Bug :
-bug04 = Quand tous les « posts » sont supprimés l’interface d’administration ne permet plus la création ou un contrôle.
 bug06 = En éditant un « post », il est impossible de remplacer les images, mais les nouvelles images sont téléchargées dans le dossier du « post » à côté des précédentes. Les nouvelles images sont renommées par le script, mais le nom du fichier dans la base de données reste inchangé.
 bug07 = À l’affichage par défaut de la page d’administration (au premier chargement) si j’utilise le bouton « add a new post » un nouveau « post » est créé, mais le formulaire d’édition n’est pas affiché, un fichier vide est créé dans « posts/ » et les données XML sont inscrites en bas dans le fichier « posts.xml » sur la dernière ligne entre </slider> et </posts>.
 bug08 = Quand j’enlève tous les « posts » (sauf 2) la page principale n’affiche plus rien (sauf la couleur de fond définie par CSS).
@@ -19,4 +18,7 @@ bug01 = Il semble que le post supprimé soit toujours le dernier (vérifié, c�
 bug05 = Quand un fichier « posts.xml » vide est placé dans le répertoire l’interface d’administration affiche une page blanche. << c'est toujours le cas mais j'ai rajouté un bouton pour resseter correctement le fichier
 bug02 = La suppression d’un « post » ne supprime pas les fichiers et dossiers présents dans le dossier « posts/ ». << done ! est-ce qu'on ne garderait pas un backup au cas où, à terme ?
 bug03 = La suppression d’un post ne supprime toutes les données dans le fichier « posts.xml », seules celles contenues dans « <post id='n'> » le sont, De plus ces données supprimées laissent des lignes vides (ce dernier point est à reproduire). < les données dans la partie "slots" sont volontairement gardées, vérifier cependant que l'auto format fonctionne bien et enlève les blancs
+bug04 = Quand tous les « posts » sont supprimés l’interface d’administration ne permet plus la création ou un contrôle.
+
+
 
