@@ -21,7 +21,8 @@
 		$formatsNames = array('full','half','quarter','thumbnail');
 		$tabExt = array('jpg','gif','png','jpeg');
 		
-		echo "postId = " . $_POST['postId'] . "<br/>";
+		if (isset($_POST['postId'])) echo "postId = " . $_POST['postId'] . "<br/>";
+		else echo "no post Id defined<br/>";
 		
 		if (!isset($_POST['postId'])) {//add post
 			$nextId=0;

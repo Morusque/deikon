@@ -69,6 +69,7 @@
 		echo $salutatoi;
 		echo 'POSTS : <br/>';
 		echo '<select class="postSelector">';
+		echo '<option idValue="-1">none</option>';
 		foreach ($posts as $post) echo '<option idValue="'.$post->getAttribute('id').'">'.$post->getAttribute('id').'</option>';
 		echo '</select><br/>';
 
