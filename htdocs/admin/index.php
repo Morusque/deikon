@@ -59,7 +59,7 @@
 			identification HTTP Digest
 		*/
 
-				
+		
 		$baseXml = '../posts.xml';
 		$doc = new DOMDocument();
 

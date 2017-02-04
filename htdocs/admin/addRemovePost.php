@@ -13,6 +13,26 @@
 				$node->removeChild($node->firstChild);
 			}
 		}
+
+		function rrmdir($dir) {// recursively remove an entire folder and all its children
+			if (is_dir($dir)) { 
+				$objects = scandir($dir); 
+				foreach ($objects as $object) { 
+					if ($object != "." && $object != "..") { 
+					if (is_dir($dir."/".$object))
+						rrmdir($dir."/".$object);
+					else
+						unlink($dir."/".$object); 
+					}
+				}
+			rmdir($dir); 
+			}
+		}
+		
+		function getPostValue($post, $attr_name) {
+			foreach($post->getElementsByTagName("element") as $node) if ($node->getAttribute("name")==$attr_name) return $node->getAttribute("value");
+			return "";
+		}		
 		
 		$baseXml = '../posts.xml';
 		$doc = new DOMDocument();
@@ -80,6 +100,7 @@
 			$posts = $doc->getElementsByTagName('post');
 			foreach ($posts as $post) {
 				if ($post->getAttribute('id')==$_POST['postId']) {
+					rrmdir("../".getPostValue($post,"folderName"));
 					remove_children($post);
 					$doc->documentElement->removeChild($post);
 				}

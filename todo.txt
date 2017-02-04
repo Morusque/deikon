@@ -9,7 +9,6 @@ séparer le css
 admin/index.php : ajouter un bouton pour réinitialiser l’authentification HTTP en cas de mauvais login
 
 Bug :
-bug02 = La suppression d’un « post » ne supprime pas les fichiers et dossiers présents dans le dossier « posts/ ».
 bug03 = La suppression d’un post ne supprime toutes les données dans le fichier « posts.xml », seules celles contenues dans « <post id='n'> » le sont, De plus ces données supprimées laissent des lignes vides (ce dernier point est à reproduire).
 bug04 = Quand tous les « posts » sont supprimés l’interface d’administration ne permet plus la création ou un contrôle.
 bug06 = En éditant un « post », il est impossible de remplacer les images, mais les nouvelles images sont téléchargées dans le dossier du « post » à côté des précédentes. Les nouvelles images sont renommées par le script, mais le nom du fichier dans la base de données reste inchangé.
@@ -18,5 +17,6 @@ bug08 = Quand j’enlève tous les « posts » (sauf 2) la page principale n�
 
 To review :
 bug01 = Il semble que le post supprimé soit toujours le dernier (vérifié, c’est bien le dernier qui est supprimé) << done ! (mais ça ne décale pas les index)
-bug05 = Quand un fichier « posts.xml » vide est placé dans le répertoire l’interface d’administration affiche une page blanche. < c'est toujours le cas mais j'ai rajouté un bouton pour resseter correctement le fichier
+bug05 = Quand un fichier « posts.xml » vide est placé dans le répertoire l’interface d’administration affiche une page blanche. << c'est toujours le cas mais j'ai rajouté un bouton pour resseter correctement le fichier
+bug02 = La suppression d’un « post » ne supprime pas les fichiers et dossiers présents dans le dossier « posts/ ». << done ! est-ce qu'on ne garderait pas un backup au cas où, à terme ?
 
