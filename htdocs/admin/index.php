@@ -105,7 +105,7 @@
 
 		$formatNames = ["thumbnail","full","quarter","half"];
 
-		echo '<form action="addRemovePost.php" method="post" ><input type="hidden" name="postId" value="' . $post->getAttribute('id') . '"/><input type="submit" value="remove this post"></input></form>';
+		echo '<form action="addRemovePost.php" method="post" ><input type="hidden" id="postToRemove" name="postId" value="' . $post->getAttribute('id') . '"/><input type="submit" value="remove this post"></input></form>';
 		echo '<form action="addRemovePost.php" method="post" ><input type="submit" value="add a new post"></input></form>';
 
 		echo '<br/>----------------------------------------<br/><br/>';
@@ -137,8 +137,13 @@
 
 	?>
 	<script type="text/javascript">
+		
+		var currentPost = "0";
+		
 		$(".postSelector").change(function () {
-			var listName = "elementList" + $(".postSelector option:selected").attr("idValue");
+			currentPost = $(".postSelector option:selected").attr("idValue");
+			$("#postToRemove").attr("value",currentPost);
+			var listName = "elementList" + currentPost;
 			$(".elementList").each(function() {$(this).hide();});
 			$("#"+listName).show();
 		});
