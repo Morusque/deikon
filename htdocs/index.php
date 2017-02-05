@@ -250,7 +250,7 @@
 		function updateSlots() {
 			for (var i=0 ; i<grouppingPerF[0] ; i++) {
 				var thisPost = posts[slotsIds[0][(currentF[0]+i)%slotsIds[0].length]];
-				$("#line"+i).html("");
+				$("#line"+i).html(""); 
 				var $thisImg = $("<img>").attr("src",thisPost.folderName+'/'+thisPost.tnUrl).addClass("thumbnail").attr("id","lineThumb"+i);
 				var $thisTitle = $("<div>").html(thisPost.title).css("font-family","Source Sans Pro").css("font-size","40px").css("font-weight","bold");
 				var $thisDescription = $("<div>").html(thisPost.description1).append('<br>').append(thisPost.description2).append('<br>').append(thisPost.description3).css("font-family","Anonymous Pro").css("font-size","30px");
