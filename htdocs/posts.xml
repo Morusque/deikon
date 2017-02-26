@@ -1,5 +1,6 @@
+<?xml version="1.0"?>
 <posts>
-	<var name="currentWeek" value="0" />
+	<var name="currentWeek" value="0"/>
 	<post id="0">
 		<element name="folderName" value="./posts/post0000"/>
 		<element name="title" value="Tricky1"/>
@@ -110,17 +111,7 @@
 		<element name="quarter" value="1DEMI_3.jpg"/>
 		<element name="thumbnail" value="th1DEMI_3nail.jpg"/>
 	</post>
-	<post id="10">
-		<element name="folderName" value="./posts/post0010"/>
-		<element name="title" value="Tricky3"/>
-		<element name="description1" value="WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"/>
-		<element name="description2" value="llllllllllllllllllllllllllllll"/>
-		<element name="description3" value="Abcdef Ab Abcdef Ab Abcdef Abc"/>
-		<element name="full" value="pleine_6.jpg"/>
-		<element name="half" value="pleine_6.jpg"/>
-		<element name="quarter" value="pleine_6.jpg"/>
-		<element name="thumbnail" value="thpleine_6nail.jpg"/>
-	</post>
+	
 	<post id="11">
 		<element name="folderName" value="./posts/post0011"/>
 		<element name="title" value="Tricky3"/>
@@ -165,72 +156,12 @@
 		<element name="quarter" value="1QUART_3.jpg"/>
 		<element name="thumbnail" value="th1QUART_3nail.jpg"/>
 	</post>
-	<post id="15">
-		<element name="folderName" value="./posts/post0015"/>
-		<element name="title" value="Tricky3"/>
-		<element name="description1" value="WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"/>
-		<element name="description2" value="llllllllllllllllllllllllllllll"/>
-		<element name="description3" value="Abcdef Ab Abcdef Ab Abcdef Abc"/>
-		<element name="full" value="pleine_7.jpg"/>
-		<element name="half" value="pleine_7.jpg"/>
-		<element name="quarter" value="pleine_7.jpg"/>
-		<element name="thumbnail" value="thpleine_7nail.jpg"/>
-	</post>
-	<post id="16">
-		<element name="folderName" value="./posts/post0016"/>
-		<element name="title" value="Tricky3"/>
-		<element name="description1" value="WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"/>
-		<element name="description2" value="llllllllllllllllllllllllllllll"/>
-		<element name="description3" value="Abcdef Ab Abcdef Ab Abcdef Abc"/>
-		<element name="full" value="1DEMI_5.jpg"/>
-		<element name="half" value="1DEMI_5.jpg"/>
-		<element name="quarter" value="1DEMI_5.jpg"/>
-		<element name="thumbnail" value="th1DEMI_5nail.jpg"/>
-	</post>
-	<post id="17">
-		<element name="folderName" value="./posts/post0017"/>
-		<element name="title" value="Tricky3"/>
-		<element name="description1" value="WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"/>
-		<element name="description2" value="llllllllllllllllllllllllllllll"/>
-		<element name="description3" value="Abcdef Ab Abcdef Ab Abcdef Abc"/>
-		<element name="full" value="1QUART_4.jpg"/>
-		<element name="half" value="1QUART_4.jpg"/>
-		<element name="quarter" value="1QUART_4.jpg"/>
-		<element name="thumbnail" value="th1QUART_4nail.jpg"/>
-	</post>
-	<post id="18">
-		<element name="folderName" value="./posts/post0018"/>
-		<element name="title" value="Tricky3"/>
-		<element name="description1" value="WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"/>
-		<element name="description2" value="llllllllllllllllllllllllllllll"/>
-		<element name="description3" value="Abcdef Ab Abcdef Ab Abcdef Abc"/>
-		<element name="full" value="1DEMI_6.jpg"/>
-		<element name="half" value="1DEMI_6.jpg"/>
-		<element name="quarter" value="1DEMI_6.jpg"/>
-		<element name="thumbnail" value="th1DEMI_6nail.jpg"/>
-	</post>
-	<post id="19">
-		<element name="folderName" value="./posts/post0019"/>
-		<element name="title" value="Tricky3"/>
-		<element name="description1" value="WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"/>
-		<element name="description2" value="llllllllllllllllllllllllllllll"/>
-		<element name="description3" value="Abcdef Ab Abcdef Ab Abcdef Abc"/>
-		<element name="full" value="1DEMI_7.jpg"/>
-		<element name="half" value="1DEMI_7.jpg"/>
-		<element name="quarter" value="1DEMI_7.jpg"/>
-		<element name="thumbnail" value="th1DEMI_7nail.jpg"/>
-	</post>
-	<post id="20">
-		<element name="folderName" value="./posts/post0020"/>
-		<element name="title" value="Tricky3"/>
-		<element name="description1" value="WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"/>
-		<element name="description2" value="llllllllllllllllllllllllllllll"/>
-		<element name="description3" value="Abcdef Ab Abcdef Ab Abcdef Abc"/>
-		<element name="full" value="pleine_4.jpg"/>
-		<element name="half" value="pleine_4.jpg"/>
-		<element name="quarter" value="pleine_4.jpg"/>
-		<element name="thumbnail" value="thpleine_4nail.jpg"/>
-	</post>
+	
+	
+	
+	
+	
+	
 	<slots>
 		<week number="0">
 			<format type="0">
@@ -344,11 +275,11 @@
 		</week>
 	</slots>
 	<slider>
-		<slide format="0" delay="5000" />
-		<slide format="1" delay="3000" />
-		<slide format="0" delay="5000" />
-		<slide format="2" delay="3000" />
-		<slide format="0" delay="5000" />
-		<slide format="3" delay="3000" />
+		<slide format="0" delay="5000"/>
+		<slide format="1" delay="3000"/>
+		<slide format="0" delay="5000"/>
+		<slide format="2" delay="3000"/>
+		<slide format="0" delay="5000"/>
+		<slide format="3" delay="3000"/>
 	</slider>
-</posts>
+<post id="10"><element name="folderName" value="./posts/post58b3488247425"/><element name="title" value="L'affaire Dussaert"/><element name="description1" value="Jusqu'o&#xF9; l'art peut'il aller trop loin ?"/><element name="description2" value="Au Th&#xE9;&#xE2;tre les 3 Soleils &#xE0; 17:10"/><element name="description3" value="Un regard exceptionnel d'intelligence sur l'escroquerie postmoderniste &#xE0; la pens&#xE9;e (Le canard enchain&#xE9;)"/><element name="full" value="58b34d0c89bf1.jpg"/><element name="half" value="58b34d0c89d4a.jpg"/><element name="quarter" value="58b34d0c89e27.jpg"/><element name="thumbnail" value="58b34d0c89ede.jpg"/></post><post id="16"><element name="folderName" value="./posts/post58b34bc0c3174"/><element name="title" value="Le bonheur des dames de Zola"/><element name="description1" value="&#xC9;criture et mise en sc&#xE8;ne Florence Camoin"/><element name="description2" value="Au Th&#xE9;&#xE2;tre du Roi Ren&#xE9; &#xE0; 14:00"/><element name="description3" value="du 7 au 30 juillet 2016"/><element name="full" value="58b34ea123328.jpg"/><element name="half" value="58b34ea123328.jpg"/><element name="quarter" value="58b34ea123260.jpg"/><element name="thumbnail" value="58b34ea123328.jpg"/></post><post id="15"><element name="folderName" value="./posts/post58b3507fa3c63"/><element name="title" value="&#xC7;a n'arrive pas qu'aux autres"/><element name="description1" value="Aurez vous le courage d'en rire, une com&#xE9;die &#xE9;crite et mise en sc&#xE8;ne par Nicolas Martinez et Beno&#xEE;t Moret"/><element name="description2" value="Au Th&#xE9;&#xE2;tre des B&#xE9;liers &#xE0; 17:40"/><element name="description3" value="pendant toute la dur&#xE9;e du festival"/><element name="full" value="58b350aa0221c.jpg"/><element name="half" value="58b350aa0245f.jpg"/><element name="quarter" value="58b350aa02397.jpg"/><element name="thumbnail" value="58b350aa0245f.jpg"/></post><post id="17"><element name="folderName" value="./posts/post58b352174ceb0"/><element name="title"/><element name="description1"/><element name="description2"/><element name="description3"/><element name="full"/><element name="half"/><element name="quarter"/><element name="thumbnail"/></post></posts>

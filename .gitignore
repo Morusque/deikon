@@ -1,3 +1,5 @@
+.~*
 backups/*
 cplocal.sh
+htdocs*.tar*
 trash/*
