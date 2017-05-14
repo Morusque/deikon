@@ -42,7 +42,7 @@
 		$tabExt = array('jpg','gif','png','jpeg');
 		
 		if (isset($_POST['postId'])) echo "postId = " . $_POST['postId'] . "<br/>";
-		else echo "no post Id defined<br/>";
+		else echo "no post Id defined (< it's ok, creating a new post)<br/>";
 		
 		if (!isset($_POST['postId'])) {//add post
 			$nextId=0;
