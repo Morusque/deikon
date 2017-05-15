@@ -133,17 +133,17 @@
 	<script type="text/javascript">
 
 		var posts = new Array();
-		var slotsIds;
+		var slotsIds;//id of post to present for slot[format][index in list]
 
-		function addPost(title,description1,description2,description3,folderName,tnUrl) {
-			posts.push({
+		function addPost(id,title,description1,description2,description3,folderName,tnUrl) {
+			posts[id]={
 				title: title,
 				description1: description1,
 				description2: description2,
 				description3: description3,
 				folderName: folderName,
 				tnUrl: tnUrl
-			});
+			}
 		}
 
 		$(document).ready(function() {
@@ -162,6 +162,7 @@
 				$posts = $doc->getElementsByTagName('post');
 				for ($i=0 ; $i < $posts->length ; $i++) {
 					$elements = $posts->item($i)->getElementsByTagName('element');
+					$id = $posts->item($i)->getAttribute("id");
 					$title="";
 					$description1="";
 					$description2="";
@@ -176,7 +177,7 @@
 						if ($elements->item($j)->getAttribute("name")=="thumbnail") $tnUrl = $elements->item($j)->getAttribute("value");
 						if ($elements->item($j)->getAttribute("name")=="folderName") $folderName = $elements->item($j)->getAttribute("value");
 					}
-					echo 'addPost("'.$title.'","'.$description1.'","'.$description2.'","'.$description3.'","'.$folderName.'","'.$tnUrl.'");';
+					echo 'addPost("'.$id.'","'.$title.'","'.$description1.'","'.$description2.'","'.$description3.'","'.$folderName.'","'.$tnUrl.'");';
 				}
 
 				$slotsIds = array();
@@ -195,9 +196,10 @@
 				echo "slotsIds = ". json_encode($slotsIds) . ";";
 
 			?>
-
-			updateSlots();
-			$("#displayStyle0").show();
+			
+			//updateSlots();
+			//$("#displayStyle0").show();
+			// TODO I commented the two lines above, but I wonder why they were there in the first place
 			switchDisplay();
 
 		});
@@ -245,27 +247,30 @@
 
 		}
 
-		var currentF = new Array(0,0,0,0);
+		var currentF = new Array(-9,-1,-4,-2);// current slot index for each format
 		var grouppingPerF = new Array(9,1,4,2);
 		function updateSlots() {
 			for (var i=0 ; i<grouppingPerF[0] ; i++) {
-				var thisPost = posts[slotsIds[0][(currentF[0]+i)%slotsIds[0].length]];
-				$("#line"+i).html("");
-				var $thisImg = $("<img>").attr("src",thisPost.folderName+'/'+thisPost.tnUrl).addClass("thumbnail").attr("id","lineThumb"+i);
-				var $thisTitle = $("<div>").html(thisPost.title).css("font-family","Source Sans Pro").css("font-size","40px").css("font-weight","bold");
-				var $thisDescription = $("<div>").html(thisPost.description1).append('<br>').append(thisPost.description2).append('<br>').append(thisPost.description3).css("font-family","Anonymous Pro").css("font-size","30px");
-				var $imgCol = $("<td>").append($thisImg);
-				var $textCol = $("<td>").append($thisTitle).append($thisDescription).css("vertical-align","top").css("padding-top","10px").css("padding-left","10px").css("word-wrap","break-word");
-				var $table = $("<table>").css("border-spacing","0px").append($imgCol).append($textCol);
-				$("#line"+i).append($table);
+				var thisPostId = slotsIds[0][(currentF[0]+i)%slotsIds[0].length];
+				if (thisPostId in posts) {// this should always be true, otherwise it means there is something wrong in the database (a slot pointing to a non existant post)
+					var thisPost = posts[thisPostId];
+					$("#line"+i).html("");
+					var $thisImg = $("<img>").attr("src",thisPost.folderName+'/'+thisPost.tnUrl).addClass("thumbnail").attr("id","lineThumb"+i);
+					var $thisTitle = $("<div>").html(thisPost.title).css("font-family","Source Sans Pro").css("font-size","40px").css("font-weight","bold");
+					var $thisDescription = $("<div>").html(thisPost.description1).append('<br>').append(thisPost.description2).append('<br>').append(thisPost.description3).css("font-family","Anonymous Pro").css("font-size","30px");
+					var $imgCol = $("<td>").append($thisImg);
+					var $textCol = $("<td>").append($thisTitle).append($thisDescription).css("vertical-align","top").css("padding-top","10px").css("padding-left","10px").css("word-wrap","break-word");
+					var $table = $("<table>").css("border-spacing","0px").append($imgCol).append($textCol);
+					$("#line"+i).append($table);
+				}
 			}
-			$("#big").attr("src",posts[slotsIds[1][currentF[1]]].folderName+'/'+posts[slotsIds[1][currentF[1]]].tnUrl);
-			$("#quarter1").attr("src",posts[slotsIds[2][(currentF[2]+0)%slotsIds[2].length]].folderName+'/'+posts[slotsIds[2][(currentF[2]+0)%slotsIds[2].length]].tnUrl);
-			$("#quarter2").attr("src",posts[slotsIds[2][(currentF[2]+1)%slotsIds[2].length]].folderName+'/'+posts[slotsIds[2][(currentF[2]+1)%slotsIds[2].length]].tnUrl);
-			$("#quarter3").attr("src",posts[slotsIds[2][(currentF[2]+2)%slotsIds[2].length]].folderName+'/'+posts[slotsIds[2][(currentF[2]+2)%slotsIds[2].length]].tnUrl);
-			$("#quarter4").attr("src",posts[slotsIds[2][(currentF[2]+3)%slotsIds[2].length]].folderName+'/'+posts[slotsIds[2][(currentF[2]+3)%slotsIds[2].length]].tnUrl);
-			$("#half1").attr("src",posts[slotsIds[3][(currentF[3]+0)%slotsIds[3].length]].folderName+'/'+posts[slotsIds[3][(currentF[3]+0)%slotsIds[3].length]].tnUrl);
-			$("#half2").attr("src",posts[slotsIds[3][(currentF[3]+1)%slotsIds[3].length]].folderName+'/'+posts[slotsIds[3][(currentF[3]+1)%slotsIds[3].length]].tnUrl);
+			if (slotsIds[1][currentF[1]] in posts) 							$("#big").attr("src",posts[slotsIds[1][currentF[1]]].folderName+'/'+posts[slotsIds[1][currentF[1]]].tnUrl);
+			if (slotsIds[2][(currentF[2]+0)%slotsIds[2].length] in posts) 	$("#quarter1").attr("src",posts[slotsIds[2][(currentF[2]+0)%slotsIds[2].length]].folderName+'/'+posts[slotsIds[2][(currentF[2]+0)%slotsIds[2].length]].tnUrl);
+			if (slotsIds[2][(currentF[2]+1)%slotsIds[2].length] in posts) 	$("#quarter2").attr("src",posts[slotsIds[2][(currentF[2]+1)%slotsIds[2].length]].folderName+'/'+posts[slotsIds[2][(currentF[2]+1)%slotsIds[2].length]].tnUrl);
+			if (slotsIds[2][(currentF[2]+2)%slotsIds[2].length] in posts) 	$("#quarter3").attr("src",posts[slotsIds[2][(currentF[2]+2)%slotsIds[2].length]].folderName+'/'+posts[slotsIds[2][(currentF[2]+2)%slotsIds[2].length]].tnUrl);
+			if (slotsIds[2][(currentF[2]+3)%slotsIds[2].length] in posts) 	$("#quarter4").attr("src",posts[slotsIds[2][(currentF[2]+3)%slotsIds[2].length]].folderName+'/'+posts[slotsIds[2][(currentF[2]+3)%slotsIds[2].length]].tnUrl);
+			if (slotsIds[3][(currentF[3]+0)%slotsIds[3].length] in posts) 							$("#half1").attr("src",posts[slotsIds[3][(currentF[3]+0)%slotsIds[3].length]].folderName+'/'+posts[slotsIds[3][(currentF[3]+0)%slotsIds[3].length]].tnUrl);
+			if (slotsIds[3][(currentF[3]+1)%slotsIds[3].length] in posts) 							$("#half2").attr("src",posts[slotsIds[3][(currentF[3]+1)%slotsIds[3].length]].folderName+'/'+posts[slotsIds[3][(currentF[3]+1)%slotsIds[3].length]].tnUrl);
 		}
 
 	</script>

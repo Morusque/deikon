@@ -11,11 +11,14 @@ créer l'intégralité du dossier (i e posts/post0012/etc) s'il n'existe pas (qu
 Il manque un bouton pour effacer un format d'image inexistant, mais téléchargé par erreur dans la mauvaise taille, car dans ce cas il faut effacer tout le post et recommencer.
 La liste déroulante (select form) ne trie pas les identifiants par ordre de grandeur
 Les dossiers des posts effacés restent sur le disque.
+appeler automatiquement "updateSlots.php" pour cleaner la bdd chaque fois que 
 
-bugs :
+Bugs :
 
-#bug 08 Quand j’enlève tous les « posts » (sauf 2) la page principale n’affiche plus rien (sauf la couleur de fond définie par CSS). << ok visiblement au chargement il fait deux fois updateSlots() et tombe sur la douzième image (2x6) qui n'existe pas
+#bug 08 
+Quand j’enlève tous les « posts » (sauf 2) la page principale n’affiche plus rien (sauf la couleur de fond définie par CSS). << ok visiblement au chargement il fait deux fois updateSlots() et tombe sur la douzième image (2x6) qui n'existe pas
 depuis peu la page de la liste affiche chaque post autant de fois que son placement, chelou
+<< celui-là s'est peut-être réglé tout seul depuis qu'on vérifier les id des posts avant de les afficher, à vérifier
 
 #bug 14
 Les nouveaux posts ne s'affichent pas, sûrement du fait que leurs codes <post id="..">...</post> du fichier XML s'ajoutent en bas du fichier.
