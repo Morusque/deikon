@@ -12,13 +12,9 @@ Il manque un bouton pour effacer un format d'image inexistant, mais télécharg�
 La liste déroulante (select form) ne trie pas les identifiants par ordre de grandeur
 Les dossiers des posts effacés restent sur le disque.
 appeler automatiquement "updateSlots.php" pour cleaner la bdd chaque fois que 
+mettre les "pists" du xml dans un même noeud pour qu'ils restent groupés et les trier dans un ordre selon leur id
 
 Bugs :
-
-#bug 08 
-Quand j’enlève tous les « posts » (sauf 2) la page principale n’affiche plus rien (sauf la couleur de fond définie par CSS). << ok visiblement au chargement il fait deux fois updateSlots() et tombe sur la douzième image (2x6) qui n'existe pas
-depuis peu la page de la liste affiche chaque post autant de fois que son placement, chelou
-<< celui-là s'est peut-être réglé tout seul depuis qu'on vérifier les id des posts avant de les afficher, à vérifier
 
 #bug 14
 Les nouveaux posts ne s'affichent pas, sûrement du fait que leurs codes <post id="..">...</post> du fichier XML s'ajoutent en bas du fichier.
@@ -34,6 +30,7 @@ bug03 = La suppression d’un post ne supprime toutes les données dans le fichi
 bug04 = Quand tous les « posts » sont supprimés l’interface d’administration ne permet plus la création ou un contrôle. << done !
 bug06 = En éditant un « post », il est impossible de remplacer les images, mais les nouvelles images sont téléchargées dans le dossier du « post » à côté des précédentes. Les nouvelles images sont renommées par le script, mais le nom du fichier dans la base de données reste inchangé. << done !
 bug07 = À l’affichage par défaut de la page d’administration (au premier chargement) si j’utilise le bouton « add a new post » un nouveau « post » est créé, mais le formulaire d’édition n’est pas affiché, un fichier vide est créé dans « posts/ » et les données XML sont inscrites en bas dans le fichier « posts.xml » sur la dernière ligne entre </slider> et </posts>. << c'est normal, TODO mettre tous les posts dans une sous catégorie "posts" du xml si on veut éviter ça, et vérifier le formatage automatique
+bug08 = Quand j’enlève tous les « posts » (sauf 2) la page principale n’affiche plus rien (sauf la couleur de fond définie par CSS). << ok visiblement au chargement il fait deux fois updateSlots() et tombe sur la douzième image (2x6) qui n'existe pas. depuis peu la page de la liste affiche chaque post autant de fois que son placement, chelou
 
 
 

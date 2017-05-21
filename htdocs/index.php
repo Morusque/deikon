@@ -251,26 +251,32 @@
 		var grouppingPerF = new Array(9,1,4,2);
 		function updateSlots() {
 			for (var i=0 ; i<grouppingPerF[0] ; i++) {
-				var thisPostId = slotsIds[0][(currentF[0]+i)%slotsIds[0].length];
-				if (thisPostId in posts) {// this should always be true, otherwise it means there is something wrong in the database (a slot pointing to a non existant post)
-					var thisPost = posts[thisPostId];
-					$("#line"+i).html("");
-					var $thisImg = $("<img>").attr("src",thisPost.folderName+'/'+thisPost.tnUrl).addClass("thumbnail").attr("id","lineThumb"+i);
-					var $thisTitle = $("<div>").html(thisPost.title).css("font-family","Source Sans Pro").css("font-size","40px").css("font-weight","bold");
-					var $thisDescription = $("<div>").html(thisPost.description1).append('<br>').append(thisPost.description2).append('<br>').append(thisPost.description3).css("font-family","Anonymous Pro").css("font-size","30px");
-					var $imgCol = $("<td>").append($thisImg);
-					var $textCol = $("<td>").append($thisTitle).append($thisDescription).css("vertical-align","top").css("padding-top","10px").css("padding-left","10px").css("word-wrap","break-word");
-					var $table = $("<table>").css("border-spacing","0px").append($imgCol).append($textCol);
-					$("#line"+i).append($table);
+				if (slotsIds[0].length>0) {// if there is at least one full picture
+					var thisPostId = slotsIds[0][(currentF[0]+i)%slotsIds[0].length];
+					if (thisPostId in posts) {// this should always be true, otherwise it means there is something wrong in the database (a slot pointing to a non existant post)
+						var thisPost = posts[thisPostId];
+						$("#line"+i).html("");
+						var $thisImg = $("<img>").attr("src",thisPost.folderName+'/'+thisPost.tnUrl).addClass("thumbnail").attr("id","lineThumb"+i);
+						var $thisTitle = $("<div>").html(thisPost.title).css("font-family","Source Sans Pro").css("font-size","40px").css("font-weight","bold");
+						var $thisDescription = $("<div>").html(thisPost.description1).append('<br>').append(thisPost.description2).append('<br>').append(thisPost.description3).css("font-family","Anonymous Pro").css("font-size","30px");
+						var $imgCol = $("<td>").append($thisImg);
+						var $textCol = $("<td>").append($thisTitle).append($thisDescription).css("vertical-align","top").css("padding-top","10px").css("padding-left","10px").css("word-wrap","break-word");
+						var $table = $("<table>").css("border-spacing","0px").append($imgCol).append($textCol);
+						$("#line"+i).append($table);
+					}
 				}
 			}
-			if (slotsIds[1][currentF[1]] in posts) 							$("#big").attr("src",posts[slotsIds[1][currentF[1]]].folderName+'/'+posts[slotsIds[1][currentF[1]]].tnUrl);
-			if (slotsIds[2][(currentF[2]+0)%slotsIds[2].length] in posts) 	$("#quarter1").attr("src",posts[slotsIds[2][(currentF[2]+0)%slotsIds[2].length]].folderName+'/'+posts[slotsIds[2][(currentF[2]+0)%slotsIds[2].length]].tnUrl);
-			if (slotsIds[2][(currentF[2]+1)%slotsIds[2].length] in posts) 	$("#quarter2").attr("src",posts[slotsIds[2][(currentF[2]+1)%slotsIds[2].length]].folderName+'/'+posts[slotsIds[2][(currentF[2]+1)%slotsIds[2].length]].tnUrl);
-			if (slotsIds[2][(currentF[2]+2)%slotsIds[2].length] in posts) 	$("#quarter3").attr("src",posts[slotsIds[2][(currentF[2]+2)%slotsIds[2].length]].folderName+'/'+posts[slotsIds[2][(currentF[2]+2)%slotsIds[2].length]].tnUrl);
-			if (slotsIds[2][(currentF[2]+3)%slotsIds[2].length] in posts) 	$("#quarter4").attr("src",posts[slotsIds[2][(currentF[2]+3)%slotsIds[2].length]].folderName+'/'+posts[slotsIds[2][(currentF[2]+3)%slotsIds[2].length]].tnUrl);
-			if (slotsIds[3][(currentF[3]+0)%slotsIds[3].length] in posts) 							$("#half1").attr("src",posts[slotsIds[3][(currentF[3]+0)%slotsIds[3].length]].folderName+'/'+posts[slotsIds[3][(currentF[3]+0)%slotsIds[3].length]].tnUrl);
-			if (slotsIds[3][(currentF[3]+1)%slotsIds[3].length] in posts) 							$("#half2").attr("src",posts[slotsIds[3][(currentF[3]+1)%slotsIds[3].length]].folderName+'/'+posts[slotsIds[3][(currentF[3]+1)%slotsIds[3].length]].tnUrl);
+			if (slotsIds[1][currentF[1]] in posts) 								$("#big").attr("src",posts[slotsIds[1][currentF[1]]].folderName+'/'+posts[slotsIds[1][currentF[1]]].tnUrl);
+			if (slotsIds[2].length>0) {// if there is at least one quarter picture
+				if (slotsIds[2][(currentF[2]+0)%slotsIds[2].length] in posts) 	$("#quarter1").attr("src",posts[slotsIds[2][(currentF[2]+0)%slotsIds[2].length]].folderName+'/'+posts[slotsIds[2][(currentF[2]+0)%slotsIds[2].length]].tnUrl);
+				if (slotsIds[2][(currentF[2]+1)%slotsIds[2].length] in posts) 	$("#quarter2").attr("src",posts[slotsIds[2][(currentF[2]+1)%slotsIds[2].length]].folderName+'/'+posts[slotsIds[2][(currentF[2]+1)%slotsIds[2].length]].tnUrl);
+				if (slotsIds[2][(currentF[2]+2)%slotsIds[2].length] in posts) 	$("#quarter3").attr("src",posts[slotsIds[2][(currentF[2]+2)%slotsIds[2].length]].folderName+'/'+posts[slotsIds[2][(currentF[2]+2)%slotsIds[2].length]].tnUrl);
+				if (slotsIds[2][(currentF[2]+3)%slotsIds[2].length] in posts) 	$("#quarter4").attr("src",posts[slotsIds[2][(currentF[2]+3)%slotsIds[2].length]].folderName+'/'+posts[slotsIds[2][(currentF[2]+3)%slotsIds[2].length]].tnUrl);
+			}
+			if (slotsIds[3].length>0) {// if there is at least one half picture
+				if (slotsIds[3][(currentF[3]+0)%slotsIds[3].length] in posts) 	$("#half1").attr("src",posts[slotsIds[3][(currentF[3]+0)%slotsIds[3].length]].folderName+'/'+posts[slotsIds[3][(currentF[3]+0)%slotsIds[3].length]].tnUrl);
+				if (slotsIds[3][(currentF[3]+1)%slotsIds[3].length] in posts) 	$("#half2").attr("src",posts[slotsIds[3][(currentF[3]+1)%slotsIds[3].length]].folderName+'/'+posts[slotsIds[3][(currentF[3]+1)%slotsIds[3].length]].tnUrl);
+			}
 		}
 
 	</script>
