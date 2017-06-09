@@ -67,7 +67,7 @@
 		
 		$doc->Load($baseXml);
 
-		$posts = $doc->getElementsByTagName('post');
+		$posts = $doc->getElementsByTagName('posts')->item(0)->getElementsByTagName('post');
 		$weeks = $doc->getElementsByTagName('slots')->item(0)->getElementsByTagName('week');
 
 		echo $salutatoi;

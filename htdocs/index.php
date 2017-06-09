@@ -159,7 +159,7 @@
 				$doc = new DOMDocument();
 				$doc->Load($baseXml);
 
-				$posts = $doc->getElementsByTagName('post');
+				$posts = $doc->getElementsByTagName('posts')->item(0)->getElementsByTagName('post');
 				for ($i=0 ; $i < $posts->length ; $i++) {
 					$elements = $posts->item($i)->getElementsByTagName('element');
 					$id = $posts->item($i)->getAttribute("id");

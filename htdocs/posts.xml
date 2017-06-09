@@ -1,236 +1,238 @@
-<posts>
+<base>
 	<var name="currentWeek" value="0" />
-	<post id="0">
-		<element name="folderName" value="./posts/post0000"/>
-		<element name="title" value="Tricky1"/>
-		<element name="description1" value="WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"/>
-		<element name="description2" value="llllllllllllllllllllllllllllllllllllllllllllllllll"/>
-		<element name="description3" value="Abcdef Ab Abcdef Ab Abcdef AbcAbcdef AbcAbcdef Abc"/>
-		<element name="full" value="picture01.jpg"/>
-		<element name="half" value="picture02.jpg"/>
-		<element name="quarter" value="picture03.jpg"/>
-		<element name="thumbnail" value="picture04.jpg"/>
-	</post>
-	<post id="1">
-		<element name="folderName" value="./posts/post0001"/>
-		<element name="title" value="Tricky2"/>
-		<element name="description1" value="WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"/>
-		<element name="description2" value="llllllllllllllllllllllllllllll"/>
-		<element name="description3" value="Abcdef Ab Abcdef Ab Abcdef Abc"/>
-		<element name="full" value="picture01.jpg"/>
-		<element name="half" value="picture02.jpg"/>
-		<element name="quarter" value="picture03.jpg"/>
-		<element name="thumbnail" value="picture04.jpg"/>
-	</post>
-	<post id="2">
-		<element name="folderName" value="./posts/post0002"/>
-		<element name="title" value="Tricky3"/>
-		<element name="description1" value="WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"/>
-		<element name="description2" value="llllllllllllllllllllllllllllll"/>
-		<element name="description3" value="Abcdef Ab Abcdef Ab Abcdef Abc"/>
-		<element name="full" value="picture01.jpg"/>
-		<element name="half" value="picture02.jpg"/>
-		<element name="quarter" value="picture03.jpg"/>
-		<element name="thumbnail" value="picture04.jpg"/>
-	</post>
-	<post id="3">
-		<element name="folderName" value="./posts/post0003"/>
-		<element name="title" value="Tricky3"/>
-		<element name="description1" value="WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"/>
-		<element name="description2" value="llllllllllllllllllllllllllllll"/>
-		<element name="description3" value="Abcdef Ab Abcdef Ab Abcdef Abc"/>
-		<element name="full" value="pleine_1.jpg"/>
-		<element name="half" value="pleine_1.jpg"/>
-		<element name="quarter" value="pleine_1.jpg"/>
-		<element name="thumbnail" value="thpleine_1nail.jpg"/>
-	</post>
-	<post id="4">
-		<element name="folderName" value="./posts/post0004"/>
-		<element name="title" value="Tricky3"/>
-		<element name="description1" value="WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"/>
-		<element name="description2" value="llllllllllllllllllllllllllllll"/>
-		<element name="description3" value="Abcdef Ab Abcdef Ab Abcdef Abc"/>
-		<element name="full" value="1QUART.jpg"/>
-		<element name="half" value="1QUART.jpg"/>
-		<element name="quarter" value="1QUART.jpg"/>
-		<element name="thumbnail" value="th1QUARTnail.jpg"/>
-	</post>
-	<post id="5">
-		<element name="folderName" value="./posts/post0005"/>
-		<element name="title" value="Tricky3"/>
-		<element name="description1" value="WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"/>
-		<element name="description2" value="llllllllllllllllllllllllllllll"/>
-		<element name="description3" value="Abcdef Ab Abcdef Ab Abcdef Abc"/>
-		<element name="full" value="1DEMI_1.jpg"/>
-		<element name="half" value="1DEMI_1.jpg"/>
-		<element name="quarter" value="1DEMI_1.jpg"/>
-		<element name="thumbnail" value="th1DEMI_1nail.jpg"/>
-	</post>
-	<post id="6">
-		<element name="folderName" value="./posts/post0006"/>
-		<element name="title" value="Tricky3"/>
-		<element name="description1" value="WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"/>
-		<element name="description2" value="llllllllllllllllllllllllllllll"/>
-		<element name="description3" value="Abcdef Ab Abcdef Ab Abcdef Abc"/>
-		<element name="full" value="1DEMI_2.jpg"/>
-		<element name="half" value="1DEMI_2.jpg"/>
-		<element name="quarter" value="1DEMI_2.jpg"/>
-		<element name="thumbnail" value="th1DEMI_2nail.jpg"/>
-	</post>
-	<post id="7">
-		<element name="folderName" value="./posts/post0007"/>
-		<element name="title" value="Tricky3"/>
-		<element name="description1" value="WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"/>
-		<element name="description2" value="llllllllllllllllllllllllllllll"/>
-		<element name="description3" value="Abcdef Ab Abcdef Ab Abcdef Abc"/>
-		<element name="full" value="pleine_2.jpg"/>
-		<element name="half" value="pleine_2.jpg"/>
-		<element name="quarter" value="pleine_2.jpg"/>
-		<element name="thumbnail" value="thpleine_2nail.jpg"/>
-	</post>
-	<post id="8">
-		<element name="folderName" value="./posts/post0008"/>
-		<element name="title" value="Tricky3"/>
-		<element name="description1" value="WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"/>
-		<element name="description2" value="llllllllllllllllllllllllllllll"/>
-		<element name="description3" value="Abcdef Ab Abcdef Ab Abcdef Abc"/>
-		<element name="full" value="pleine_3.jpg"/>
-		<element name="half" value="pleine_3.jpg"/>
-		<element name="quarter" value="pleine_3.jpg"/>
-		<element name="thumbnail" value="thpleine_3nail.jpg"/>
-	</post>
-	<post id="9">
-		<element name="folderName" value="./posts/post0009"/>
-		<element name="title" value="Tricky3"/>
-		<element name="description1" value="WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"/>
-		<element name="description2" value="llllllllllllllllllllllllllllll"/>
-		<element name="description3" value="Abcdef Ab Abcdef Ab Abcdef Abc"/>
-		<element name="full" value="1DEMI_3.jpg"/>
-		<element name="half" value="1DEMI_3.jpg"/>
-		<element name="quarter" value="1DEMI_3.jpg"/>
-		<element name="thumbnail" value="th1DEMI_3nail.jpg"/>
-	</post>
-	<post id="10">
-		<element name="folderName" value="./posts/post0010"/>
-		<element name="title" value="Tricky3"/>
-		<element name="description1" value="WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"/>
-		<element name="description2" value="llllllllllllllllllllllllllllll"/>
-		<element name="description3" value="Abcdef Ab Abcdef Ab Abcdef Abc"/>
-		<element name="full" value="pleine_6.jpg"/>
-		<element name="half" value="pleine_6.jpg"/>
-		<element name="quarter" value="pleine_6.jpg"/>
-		<element name="thumbnail" value="thpleine_6nail.jpg"/>
-	</post>
-	<post id="11">
-		<element name="folderName" value="./posts/post0011"/>
-		<element name="title" value="Tricky3"/>
-		<element name="description1" value="WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"/>
-		<element name="description2" value="llllllllllllllllllllllllllllll"/>
-		<element name="description3" value="Abcdef Ab Abcdef Ab Abcdef Abc"/>
-		<element name="full" value="1DEMI_4.jpg"/>
-		<element name="half" value="1DEMI_4.jpg"/>
-		<element name="quarter" value="1DEMI_4.jpg"/>
-		<element name="thumbnail" value="th1DEMI_4nail.jpg"/>
-	</post>
-	<post id="12">
-		<element name="folderName" value="./posts/post0012"/>
-		<element name="title" value="Tricky3"/>
-		<element name="description1" value="WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"/>
-		<element name="description2" value="llllllllllllllllllllllllllllll"/>
-		<element name="description3" value="Abcdef Ab Abcdef Ab Abcdef Abc"/>
-		<element name="full" value="pleine_5.jpg"/>
-		<element name="half" value="pleine_5.jpg"/>
-		<element name="quarter" value="pleine_5.jpg"/>
-		<element name="thumbnail" value="thpleine_5nail.jpg"/>
-	</post>
-	<post id="13">
-		<element name="folderName" value="./posts/post0013"/>
-		<element name="title" value="Tricky3"/>
-		<element name="description1" value="WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"/>
-		<element name="description2" value="llllllllllllllllllllllllllllll"/>
-		<element name="description3" value="Abcdef Ab Abcdef Ab Abcdef Abc"/>
-		<element name="full" value="1QUART_2.jpg"/>
-		<element name="half" value="1QUART_2.jpg"/>
-		<element name="quarter" value="1QUART_2.jpg"/>
-		<element name="thumbnail" value="th1QUART_2nail.jpg"/>
-	</post>
-	<post id="14">
-		<element name="folderName" value="./posts/post0014"/>
-		<element name="title" value="Tricky3"/>
-		<element name="description1" value="WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"/>
-		<element name="description2" value="llllllllllllllllllllllllllllll"/>
-		<element name="description3" value="Abcdef Ab Abcdef Ab Abcdef Abc"/>
-		<element name="full" value="1QUART_3.jpg"/>
-		<element name="half" value="1QUART_3.jpg"/>
-		<element name="quarter" value="1QUART_3.jpg"/>
-		<element name="thumbnail" value="th1QUART_3nail.jpg"/>
-	</post>
-	<post id="15">
-		<element name="folderName" value="./posts/post0015"/>
-		<element name="title" value="Tricky3"/>
-		<element name="description1" value="WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"/>
-		<element name="description2" value="llllllllllllllllllllllllllllll"/>
-		<element name="description3" value="Abcdef Ab Abcdef Ab Abcdef Abc"/>
-		<element name="full" value="pleine_7.jpg"/>
-		<element name="half" value="pleine_7.jpg"/>
-		<element name="quarter" value="pleine_7.jpg"/>
-		<element name="thumbnail" value="thpleine_7nail.jpg"/>
-	</post>
-	<post id="16">
-		<element name="folderName" value="./posts/post0016"/>
-		<element name="title" value="Tricky3"/>
-		<element name="description1" value="WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"/>
-		<element name="description2" value="llllllllllllllllllllllllllllll"/>
-		<element name="description3" value="Abcdef Ab Abcdef Ab Abcdef Abc"/>
-		<element name="full" value="1DEMI_5.jpg"/>
-		<element name="half" value="1DEMI_5.jpg"/>
-		<element name="quarter" value="1DEMI_5.jpg"/>
-		<element name="thumbnail" value="th1DEMI_5nail.jpg"/>
-	</post>
-	<post id="17">
-		<element name="folderName" value="./posts/post0017"/>
-		<element name="title" value="Tricky3"/>
-		<element name="description1" value="WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"/>
-		<element name="description2" value="llllllllllllllllllllllllllllll"/>
-		<element name="description3" value="Abcdef Ab Abcdef Ab Abcdef Abc"/>
-		<element name="full" value="1QUART_4.jpg"/>
-		<element name="half" value="1QUART_4.jpg"/>
-		<element name="quarter" value="1QUART_4.jpg"/>
-		<element name="thumbnail" value="th1QUART_4nail.jpg"/>
-	</post>
-	<post id="18">
-		<element name="folderName" value="./posts/post0018"/>
-		<element name="title" value="Tricky3"/>
-		<element name="description1" value="WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"/>
-		<element name="description2" value="llllllllllllllllllllllllllllll"/>
-		<element name="description3" value="Abcdef Ab Abcdef Ab Abcdef Abc"/>
-		<element name="full" value="1DEMI_6.jpg"/>
-		<element name="half" value="1DEMI_6.jpg"/>
-		<element name="quarter" value="1DEMI_6.jpg"/>
-		<element name="thumbnail" value="th1DEMI_6nail.jpg"/>
-	</post>
-	<post id="19">
-		<element name="folderName" value="./posts/post0019"/>
-		<element name="title" value="Tricky3"/>
-		<element name="description1" value="WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"/>
-		<element name="description2" value="llllllllllllllllllllllllllllll"/>
-		<element name="description3" value="Abcdef Ab Abcdef Ab Abcdef Abc"/>
-		<element name="full" value="1DEMI_7.jpg"/>
-		<element name="half" value="1DEMI_7.jpg"/>
-		<element name="quarter" value="1DEMI_7.jpg"/>
-		<element name="thumbnail" value="th1DEMI_7nail.jpg"/>
-	</post>
-	<post id="20">
-		<element name="folderName" value="./posts/post0020"/>
-		<element name="title" value="Tricky3"/>
-		<element name="description1" value="WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"/>
-		<element name="description2" value="llllllllllllllllllllllllllllll"/>
-		<element name="description3" value="Abcdef Ab Abcdef Ab Abcdef Abc"/>
-		<element name="full" value="pleine_4.jpg"/>
-		<element name="half" value="pleine_4.jpg"/>
-		<element name="quarter" value="pleine_4.jpg"/>
-		<element name="thumbnail" value="thpleine_4nail.jpg"/>
-	</post>
+	<posts>
+		<post id="0">
+			<element name="folderName" value="./posts/post0000"/>
+			<element name="title" value="Tricky1"/>
+			<element name="description1" value="WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"/>
+			<element name="description2" value="llllllllllllllllllllllllllllllllllllllllllllllllll"/>
+			<element name="description3" value="Abcdef Ab Abcdef Ab Abcdef AbcAbcdef AbcAbcdef Abc"/>
+			<element name="full" value="picture01.jpg"/>
+			<element name="half" value="picture02.jpg"/>
+			<element name="quarter" value="picture03.jpg"/>
+			<element name="thumbnail" value="picture04.jpg"/>
+		</post>
+		<post id="1">
+			<element name="folderName" value="./posts/post0001"/>
+			<element name="title" value="Tricky2"/>
+			<element name="description1" value="WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"/>
+			<element name="description2" value="llllllllllllllllllllllllllllll"/>
+			<element name="description3" value="Abcdef Ab Abcdef Ab Abcdef Abc"/>
+			<element name="full" value="picture01.jpg"/>
+			<element name="half" value="picture02.jpg"/>
+			<element name="quarter" value="picture03.jpg"/>
+			<element name="thumbnail" value="picture04.jpg"/>
+		</post>
+		<post id="2">
+			<element name="folderName" value="./posts/post0002"/>
+			<element name="title" value="Tricky3"/>
+			<element name="description1" value="WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"/>
+			<element name="description2" value="llllllllllllllllllllllllllllll"/>
+			<element name="description3" value="Abcdef Ab Abcdef Ab Abcdef Abc"/>
+			<element name="full" value="picture01.jpg"/>
+			<element name="half" value="picture02.jpg"/>
+			<element name="quarter" value="picture03.jpg"/>
+			<element name="thumbnail" value="picture04.jpg"/>
+		</post>
+		<post id="3">
+			<element name="folderName" value="./posts/post0003"/>
+			<element name="title" value="Tricky3"/>
+			<element name="description1" value="WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"/>
+			<element name="description2" value="llllllllllllllllllllllllllllll"/>
+			<element name="description3" value="Abcdef Ab Abcdef Ab Abcdef Abc"/>
+			<element name="full" value="pleine_1.jpg"/>
+			<element name="half" value="pleine_1.jpg"/>
+			<element name="quarter" value="pleine_1.jpg"/>
+			<element name="thumbnail" value="thpleine_1nail.jpg"/>
+		</post>
+		<post id="4">
+			<element name="folderName" value="./posts/post0004"/>
+			<element name="title" value="Tricky3"/>
+			<element name="description1" value="WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"/>
+			<element name="description2" value="llllllllllllllllllllllllllllll"/>
+			<element name="description3" value="Abcdef Ab Abcdef Ab Abcdef Abc"/>
+			<element name="full" value="1QUART.jpg"/>
+			<element name="half" value="1QUART.jpg"/>
+			<element name="quarter" value="1QUART.jpg"/>
+			<element name="thumbnail" value="th1QUARTnail.jpg"/>
+		</post>
+		<post id="5">
+			<element name="folderName" value="./posts/post0005"/>
+			<element name="title" value="Tricky3"/>
+			<element name="description1" value="WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"/>
+			<element name="description2" value="llllllllllllllllllllllllllllll"/>
+			<element name="description3" value="Abcdef Ab Abcdef Ab Abcdef Abc"/>
+			<element name="full" value="1DEMI_1.jpg"/>
+			<element name="half" value="1DEMI_1.jpg"/>
+			<element name="quarter" value="1DEMI_1.jpg"/>
+			<element name="thumbnail" value="th1DEMI_1nail.jpg"/>
+		</post>
+		<post id="6">
+			<element name="folderName" value="./posts/post0006"/>
+			<element name="title" value="Tricky3"/>
+			<element name="description1" value="WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"/>
+			<element name="description2" value="llllllllllllllllllllllllllllll"/>
+			<element name="description3" value="Abcdef Ab Abcdef Ab Abcdef Abc"/>
+			<element name="full" value="1DEMI_2.jpg"/>
+			<element name="half" value="1DEMI_2.jpg"/>
+			<element name="quarter" value="1DEMI_2.jpg"/>
+			<element name="thumbnail" value="th1DEMI_2nail.jpg"/>
+		</post>
+		<post id="7">
+			<element name="folderName" value="./posts/post0007"/>
+			<element name="title" value="Tricky3"/>
+			<element name="description1" value="WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"/>
+			<element name="description2" value="llllllllllllllllllllllllllllll"/>
+			<element name="description3" value="Abcdef Ab Abcdef Ab Abcdef Abc"/>
+			<element name="full" value="pleine_2.jpg"/>
+			<element name="half" value="pleine_2.jpg"/>
+			<element name="quarter" value="pleine_2.jpg"/>
+			<element name="thumbnail" value="thpleine_2nail.jpg"/>
+		</post>
+		<post id="8">
+			<element name="folderName" value="./posts/post0008"/>
+			<element name="title" value="Tricky3"/>
+			<element name="description1" value="WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"/>
+			<element name="description2" value="llllllllllllllllllllllllllllll"/>
+			<element name="description3" value="Abcdef Ab Abcdef Ab Abcdef Abc"/>
+			<element name="full" value="pleine_3.jpg"/>
+			<element name="half" value="pleine_3.jpg"/>
+			<element name="quarter" value="pleine_3.jpg"/>
+			<element name="thumbnail" value="thpleine_3nail.jpg"/>
+		</post>
+		<post id="9">
+			<element name="folderName" value="./posts/post0009"/>
+			<element name="title" value="Tricky3"/>
+			<element name="description1" value="WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"/>
+			<element name="description2" value="llllllllllllllllllllllllllllll"/>
+			<element name="description3" value="Abcdef Ab Abcdef Ab Abcdef Abc"/>
+			<element name="full" value="1DEMI_3.jpg"/>
+			<element name="half" value="1DEMI_3.jpg"/>
+			<element name="quarter" value="1DEMI_3.jpg"/>
+			<element name="thumbnail" value="th1DEMI_3nail.jpg"/>
+		</post>
+		<post id="10">
+			<element name="folderName" value="./posts/post0010"/>
+			<element name="title" value="Tricky3"/>
+			<element name="description1" value="WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"/>
+			<element name="description2" value="llllllllllllllllllllllllllllll"/>
+			<element name="description3" value="Abcdef Ab Abcdef Ab Abcdef Abc"/>
+			<element name="full" value="pleine_6.jpg"/>
+			<element name="half" value="pleine_6.jpg"/>
+			<element name="quarter" value="pleine_6.jpg"/>
+			<element name="thumbnail" value="thpleine_6nail.jpg"/>
+		</post>
+		<post id="11">
+			<element name="folderName" value="./posts/post0011"/>
+			<element name="title" value="Tricky3"/>
+			<element name="description1" value="WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"/>
+			<element name="description2" value="llllllllllllllllllllllllllllll"/>
+			<element name="description3" value="Abcdef Ab Abcdef Ab Abcdef Abc"/>
+			<element name="full" value="1DEMI_4.jpg"/>
+			<element name="half" value="1DEMI_4.jpg"/>
+			<element name="quarter" value="1DEMI_4.jpg"/>
+			<element name="thumbnail" value="th1DEMI_4nail.jpg"/>
+		</post>
+		<post id="12">
+			<element name="folderName" value="./posts/post0012"/>
+			<element name="title" value="Tricky3"/>
+			<element name="description1" value="WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"/>
+			<element name="description2" value="llllllllllllllllllllllllllllll"/>
+			<element name="description3" value="Abcdef Ab Abcdef Ab Abcdef Abc"/>
+			<element name="full" value="pleine_5.jpg"/>
+			<element name="half" value="pleine_5.jpg"/>
+			<element name="quarter" value="pleine_5.jpg"/>
+			<element name="thumbnail" value="thpleine_5nail.jpg"/>
+		</post>
+		<post id="13">
+			<element name="folderName" value="./posts/post0013"/>
+			<element name="title" value="Tricky3"/>
+			<element name="description1" value="WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"/>
+			<element name="description2" value="llllllllllllllllllllllllllllll"/>
+			<element name="description3" value="Abcdef Ab Abcdef Ab Abcdef Abc"/>
+			<element name="full" value="1QUART_2.jpg"/>
+			<element name="half" value="1QUART_2.jpg"/>
+			<element name="quarter" value="1QUART_2.jpg"/>
+			<element name="thumbnail" value="th1QUART_2nail.jpg"/>
+		</post>
+		<post id="14">
+			<element name="folderName" value="./posts/post0014"/>
+			<element name="title" value="Tricky3"/>
+			<element name="description1" value="WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"/>
+			<element name="description2" value="llllllllllllllllllllllllllllll"/>
+			<element name="description3" value="Abcdef Ab Abcdef Ab Abcdef Abc"/>
+			<element name="full" value="1QUART_3.jpg"/>
+			<element name="half" value="1QUART_3.jpg"/>
+			<element name="quarter" value="1QUART_3.jpg"/>
+			<element name="thumbnail" value="th1QUART_3nail.jpg"/>
+		</post>
+		<post id="15">
+			<element name="folderName" value="./posts/post0015"/>
+			<element name="title" value="Tricky3"/>
+			<element name="description1" value="WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"/>
+			<element name="description2" value="llllllllllllllllllllllllllllll"/>
+			<element name="description3" value="Abcdef Ab Abcdef Ab Abcdef Abc"/>
+			<element name="full" value="pleine_7.jpg"/>
+			<element name="half" value="pleine_7.jpg"/>
+			<element name="quarter" value="pleine_7.jpg"/>
+			<element name="thumbnail" value="thpleine_7nail.jpg"/>
+		</post>
+		<post id="16">
+			<element name="folderName" value="./posts/post0016"/>
+			<element name="title" value="Tricky3"/>
+			<element name="description1" value="WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"/>
+			<element name="description2" value="llllllllllllllllllllllllllllll"/>
+			<element name="description3" value="Abcdef Ab Abcdef Ab Abcdef Abc"/>
+			<element name="full" value="1DEMI_5.jpg"/>
+			<element name="half" value="1DEMI_5.jpg"/>
+			<element name="quarter" value="1DEMI_5.jpg"/>
+			<element name="thumbnail" value="th1DEMI_5nail.jpg"/>
+		</post>
+		<post id="17">
+			<element name="folderName" value="./posts/post0017"/>
+			<element name="title" value="Tricky3"/>
+			<element name="description1" value="WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"/>
+			<element name="description2" value="llllllllllllllllllllllllllllll"/>
+			<element name="description3" value="Abcdef Ab Abcdef Ab Abcdef Abc"/>
+			<element name="full" value="1QUART_4.jpg"/>
+			<element name="half" value="1QUART_4.jpg"/>
+			<element name="quarter" value="1QUART_4.jpg"/>
+			<element name="thumbnail" value="th1QUART_4nail.jpg"/>
+		</post>
+		<post id="18">
+			<element name="folderName" value="./posts/post0018"/>
+			<element name="title" value="Tricky3"/>
+			<element name="description1" value="WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"/>
+			<element name="description2" value="llllllllllllllllllllllllllllll"/>
+			<element name="description3" value="Abcdef Ab Abcdef Ab Abcdef Abc"/>
+			<element name="full" value="1DEMI_6.jpg"/>
+			<element name="half" value="1DEMI_6.jpg"/>
+			<element name="quarter" value="1DEMI_6.jpg"/>
+			<element name="thumbnail" value="th1DEMI_6nail.jpg"/>
+		</post>
+		<post id="19">
+			<element name="folderName" value="./posts/post0019"/>
+			<element name="title" value="Tricky3"/>
+			<element name="description1" value="WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"/>
+			<element name="description2" value="llllllllllllllllllllllllllllll"/>
+			<element name="description3" value="Abcdef Ab Abcdef Ab Abcdef Abc"/>
+			<element name="full" value="1DEMI_7.jpg"/>
+			<element name="half" value="1DEMI_7.jpg"/>
+			<element name="quarter" value="1DEMI_7.jpg"/>
+			<element name="thumbnail" value="th1DEMI_7nail.jpg"/>
+		</post>
+		<post id="20">
+			<element name="folderName" value="./posts/post0020"/>
+			<element name="title" value="Tricky3"/>
+			<element name="description1" value="WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"/>
+			<element name="description2" value="llllllllllllllllllllllllllllll"/>
+			<element name="description3" value="Abcdef Ab Abcdef Ab Abcdef Abc"/>
+			<element name="full" value="pleine_4.jpg"/>
+			<element name="half" value="pleine_4.jpg"/>
+			<element name="quarter" value="pleine_4.jpg"/>
+			<element name="thumbnail" value="thpleine_4nail.jpg"/>
+		</post>
+	</posts>
 	<slots>
 		<week number="0">
 			<format type="0">
@@ -351,4 +353,4 @@
 		<slide format="0" delay="5000" />
 		<slide format="3" delay="3000" />
 	</slider>
-</posts>
+</base>

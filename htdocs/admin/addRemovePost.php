@@ -91,13 +91,13 @@
 			$child->setAttribute("name","thumbnail");
 			$newPost->appendChild($child);
 			
-			$doc->documentElement->appendChild($newPost);
+			$doc->documentElement->getElementsByTagName('posts')->item(0)->appendChild($newPost);
 		
 			mkdir ('../'.$folderName);
 			
 		} else {// remove post with given id
 			
-			$posts = $doc->getElementsByTagName('post');
+			$posts = $doc->getElementsByTagName('posts')->item(0)->getElementsByTagName('post');
 			foreach ($posts as $post) {
 				if ($post->getAttribute('id')==$_POST['postId']) {
 					rrmdir("../".getPostValue($post,"folderName"));

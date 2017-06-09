@@ -1,5 +1,7 @@
-<posts>
+<base>
 	<var name="currentWeek" value="0" />
+	<posts>
+	</posts>
 	<slots>
 		<week number="0">
 			<format type="0">
@@ -120,4 +122,4 @@
 		<slide format="0" delay="5000" />
 		<slide format="3" delay="3000" />
 	</slider>
-</posts>
+</base>

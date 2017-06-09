@@ -23,7 +23,7 @@
 		if (isset($_POST['quarter'])) echo $_POST['quarter'] . "<br/>";
 		if (isset($_POST['thumbnail'])) echo $_POST['thumbnail'] . "<br/>";
 		
-		$posts = $doc->getElementsByTagName('post');
+		$posts = $doc->getElementsByTagName('posts')->item(0)->getElementsByTagName('post');
 		$thisPost = null;
 		foreach ($posts as $post) {
 			if ($_POST['postId']==$post->getAttribute('id')) {
