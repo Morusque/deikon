@@ -1,21 +1,23 @@
 ﻿
 Features :
-faire des previews pour les slots
-dater les semaines
-prévoir des stats
-commenter le code
 faire l'admin en ajax sans recharger les pages
 séparer le css
-admin/index.php : ajouter un bouton pour réinitialiser l’authentification HTTP en cas de mauvais login
 créer l'intégralité du dossier (i e posts/post0012/etc) s'il n'existe pas (quand on demande uniquement un fichier à l'intérieur il zappe l'arborescence entière)
 Il manque un bouton pour effacer un format d'image inexistant, mais téléchargé par erreur dans la mauvaise taille, car dans ce cas il faut effacer tout le post et recommencer.
-La liste déroulante (select form) ne trie pas les identifiants par ordre de grandeur
+La liste déroulante (select form) ne trie pas les identifiants par ordre de grandeur < régler ce problème en triant le xml directement si possible
 Les dossiers des posts effacés restent sur le disque.
 appeler automatiquement "updateSlots.php" pour cleaner la bdd chaque fois que 
-mettre les "pists" du xml dans un même noeud pour qu'ils restent groupés et les trier dans un ordre selon leur id
+mettre les "posts" du xml dans un même noeud pour qu'ils restent groupés et les trier dans un ordre selon leur id
+faire des meilleures queries pour checker les "elements" du xml sans les passer en revue à chaque fois
+updater les previews pour les slots au moment de changer l'item dans la liste
+commenter le code
+admin/index.php : ajouter un bouton pour réinitialiser l’authentification HTTP en cas de mauvais login
+
+Features next version :
+prévoir des stats
+dater les semaines
 
 Bugs :
-#bug 12 Quand je rentre un post avec 3 images (sur les quatre) (ici full + quarter + thumb) le quatrième est crée (à partir du full je crois), mais ceci semble le cas dans le XML seulement (sans création sur le disque). Ce n'est pas le cas avec 2 images. << c'est a priori le comprotement normal, c'est peut-être donc pour les 2 images que ça ne marche pas, qu'est-ce qui se passe à la place ?
 
 To review :
 bug01 = Il semble que le post supprimé soit toujours le dernier (vérifié, c’est bien le dernier qui est supprimé) << done ! (mais ça ne décale pas les index)
@@ -27,6 +29,7 @@ bug06 = En éditant un « post », il est impossible de remplacer les images, 
 bug07 = À l’affichage par défaut de la page d’administration (au premier chargement) si j’utilise le bouton « add a new post » un nouveau « post » est créé, mais le formulaire d’édition n’est pas affiché, un fichier vide est créé dans « posts/ » et les données XML sont inscrites en bas dans le fichier « posts.xml » sur la dernière ligne entre </slider> et </posts>. << c'est normal, TODO mettre tous les posts dans une sous catégorie "posts" du xml si on veut éviter ça, et vérifier le formatage automatique
 bug08 = Quand j’enlève tous les « posts » (sauf 2) la page principale n’affiche plus rien (sauf la couleur de fond définie par CSS). << ok visiblement au chargement il fait deux fois updateSlots() et tombe sur la douzième image (2x6) qui n'existe pas. depuis peu la page de la liste affiche chaque post autant de fois que son placement, chelou
 bug14 = Les nouveaux posts ne s'affichent pas, sûrement du fait que leurs codes <post id="..">...</post> du fichier XML s'ajoutent en bas du fichier.
+bug12 = Quand je rentre un post avec 3 images (sur les quatre) (ici full + quarter + thumb) le quatrième est crée (à partir du full je crois), mais ceci semble le cas dans le XML seulement (sans création sur le disque). Ce n'est pas le cas avec 2 images. << c'est a priori le comprotement normal, c'est peut-être donc pour les 2 images que ça ne marche pas, qu'est-ce qui se passe à la place ?
 
 
 

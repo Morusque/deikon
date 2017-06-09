@@ -119,10 +119,23 @@
 		foreach ($weeks as $week) {
 			echo 'WEEK : '.$week->getAttribute("number").'<br/>';
 			foreach ($week->getElementsByTagName("format") as $format) {
-				echo '- FORMAT '.$format->getAttribute("type").' ('.$formatNames[$format->getAttribute("type")].') '.' <br/> SLOTS : ';
+				echo '- FORMAT '.$format->getAttribute("type").' ('.$formatNames[$format->getAttribute("type")].') '.' <br/> SLOTS : <br/>';
+				$posts = $doc->getElementsByTagName('posts')->item(0)->getElementsByTagName('post');
+				echo '<table><tr>';
 				foreach ($format->getElementsByTagName("slot") as $slot) {
-					echo '<select name="format'.$format->getAttribute("type").'slot'.$slot->getAttribute("number").'" autocomplete="off">';
-					$posts = $doc->getElementsByTagName('post');
+					echo '<td>';
+					// image
+					$found = false;
+					foreach ($posts as $post) {
+						if ($post->getAttribute('id')==$slot->getAttribute("targetid")) {
+							echo '<img src="../'.getPostValue($post, "folderName").'/'.getPostValue($post, "thumbnail").'" style="width:70px;height:70px;"></img>';
+							$found = true;
+						}
+					}
+					if (!$found) echo '<img src="../images/noPic.png" style="width:70px;height:70px;"></img>';
+					echo '<br/>';
+					// choice
+					echo '<select name="format'.$format->getAttribute("type").'slot'.$slot->getAttribute("number").'" autocomplete="off" style="width:70px;">';
 					echo '<option value="-1" ';
 					if ($slot->getAttribute("targetid")==-1) echo 'selected="true"';
 					echo '>-1</option>';
@@ -132,7 +145,9 @@
 						echo '>'.$post->getAttribute('id').'</option>';
 					}
 					echo '</select>';
+					echo '</td>';
 				}
+				echo '</tr></table>';
 				echo '<br/><br/>';
 			}
 			echo '<br/>';

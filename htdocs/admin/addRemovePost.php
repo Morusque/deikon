@@ -102,7 +102,7 @@
 				if ($post->getAttribute('id')==$_POST['postId']) {
 					rrmdir("../".getPostValue($post,"folderName"));
 					remove_children($post);
-					$doc->documentElement->removeChild($post);
+					$doc->getElementsByTagName('posts')->item(0)->removeChild($post);
 				}
 			}
 
